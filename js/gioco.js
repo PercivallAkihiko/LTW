@@ -232,9 +232,14 @@ function funzione_gioco(){
   }
   console.log(randomnumber);
   controllo_foto.push(randomnumber);
-  if (controllo_foto.length == numero_foto)
+  if (controllo_foto.length - 1 == numero_foto - 1)
   {
     controllo_foto = new Array();
+    console.log("---------");
+  }
+  else
+  {
+    console.log("LENGHT : " + controllo_foto.length);
   }
   var prova = document.getElementById('panorama1');
   prova.parentNode.removeChild(prova);
