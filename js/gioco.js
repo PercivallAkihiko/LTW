@@ -1,8 +1,8 @@
-var numero_foto=12;
 var avanti_streak=0;
-var vite_rimanenti=1000;
+var vite_rimanenti=3;
 var randomnumber=1;
 var primo_round = true;
+var controllo_foto = new Array();
 const myQuestions = [
   {
     correctAnswer: "New York, United States",
@@ -51,8 +51,8 @@ const myQuestions = [
     {
       correctAnswer: "Oslo, Norway",
       file: "assets/game/12.jpg"
-    }
-    /*{
+    },
+    {
       correctAnswer: "Madrid, Spain",
       file: "assets/game/13.jpg"
     },
@@ -203,8 +203,10 @@ const myQuestions = [
     {
       correctAnswer: "Grenoble, France",
       file: "assets/game/50.jpg"
-    }*/
+    }
 ];
+
+var numero_foto=myQuestions.length;
 
 function funzione_gioco(){
   if (primo_round == false)
@@ -224,6 +226,16 @@ function funzione_gioco(){
   } 
 }
   randomnumber = Math.floor(Math.random() * (numero_foto - 1 + 1)) + 1;
+  while (controllo_foto.includes(randomnumber) == true)
+  {
+    randomnumber = Math.floor(Math.random() * (numero_foto - 1 + 1)) + 1;
+  }
+  console.log(randomnumber);
+  controllo_foto.push(randomnumber);
+  if (controllo_foto.length == numero_foto)
+  {
+    controllo_foto = new Array();
+  }
   var prova = document.getElementById('panorama1');
   prova.parentNode.removeChild(prova);
   var prova2 = document.createElement('a-sky');
@@ -231,6 +243,7 @@ function funzione_gioco(){
   prova2.setAttribute('src', myQuestions[randomnumber-1].file);
   prova2.setAttribute('rotation', "0 -90 0");
   document.getElementById("scenetta").appendChild(prova2);
+
   //document.querySelector('#panorama1').setAttribute('src', myQuestions[randomnumber-1].file);
   var alphabet = "abcd";
   var emptyString = alphabet[Math.floor(Math.random() * alphabet.length)];

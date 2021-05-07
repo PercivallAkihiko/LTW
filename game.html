@@ -1,92 +1,78 @@
 <!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/63209a46b9.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="css/mainstyle.css">
-    <link rel="stylesheet" type="text/css" href="css/game.css">
-    <title>game</title>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.2.0/aframe.min.js"></script>
-        <script>
-            window.addEventListener("wheel", (event) => {
-              // small increments for smoother zooming
-              var delta = event.wheelDelta / 120 / 10;
-              console.log(delta);
-              var mycam = document.getElementById("cam").getAttribute("camera");
-              var finalZoom =
-                document.getElementById("cam").getAttribute("camera").zoom + delta;
-              // limiting the zoom
-              if (finalZoom < 1) finalZoom = 1;
-              if (finalZoom > 3) finalZoom = 3;
-              mycam.zoom = finalZoom;
-              document.getElementById("cam").setAttribute("camera", mycam);
-            });
-          </script>
+  <html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>game</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/63209a46b9.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="css/mainstyle.css">
+        <link rel="stylesheet" type="text/css" href="css/game.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.2.0/aframe.min.js"></script>
         <script type="text/javascript" src="js/gioco.js"></script>
         <script type="text/javascript" src="js/load_json.js"></script>
+        <script type="text/javascript" src="js/mouse_wheel.js"></script>
+    </head>
 
-</head>
-  <body onload="funzione_iniziale()">
-      <div class="wrapper">
-            <div class="top_bar">
-                <div class="logo">
-                  <img src="assets/logo.png">
-                  <testo_logo> SPOTME </testo_logo>
-                </div>
-                <div class="menu">
-                    <a href="tutorial.html">TUTORIAL</a>
-                    <a href="ranking.html">RANKING</a>
-                    <a href="index.php">LOGIN</a>
-                </div>
-            </div>
-            <div class="rinchiudo">
-                <div class="vite_bar">
-                        <div class="vite_testo">vite:</div>
-                        <div id=vite_rimaste class="vite_testo">3</div>
-                </div>
-                <div class="state_bar">
-                    <div class="round_numero">streak:</div>
-                    <div id=streak class="round_numero">0</div>
-                </div>
+    <body onload="funzione_iniziale()">
+        <div class="wrapper">
+              <div class="top_bar">
+                  <div class="logo">
+                    <img src="assets/logo.png">
+                    <testo_logo> SPOTME </testo_logo>
+                  </div>
+                  <div class="menu">
+                      <a href="tutorial.html">TUTORIAL</a>
+                      <a href="ranking.html">RANKING</a>
+                      <a href="index.php">LOGIN</a>
+                  </div>
+              </div>
+              <div class="rinchiudo">
+                  <div class="vite_bar">
+                          <div class="vite_testo">vite:</div>
+                          <div id=vite_rimaste class="vite_testo">3</div>
+                  </div>
+                  <div class="state_bar">
+                      <div class="round_numero">streak:</div>
+                      <div id=streak class="round_numero">0</div>
+                  </div>
 
-                <div class="quiz_body">
-                    <form>
-                        <div>In che città ci troviamo?</div>
-                        <div>
-                            <input id="risultato_a" type="radio" name="quizzolo"
-                                   checked>
-                            <label  id="risultato_a1" for="a">Rome, Italy</label>
-                          </div>
-                          
+                  <div class="quiz_body">
+                      <form>
+                          <div>In che città ci troviamo?</div>
                           <div>
-                            <input  id="risultato_b" type="radio" name="quizzolo">
-                            <label  id="risultato_b1" for="b">New York, United States</label>
-                          </div>
-                          
-                          <div>
-                            <input id="risultato_c" type="radio" name="quizzolo">
-                            <label  id="risultato_c1" for="c">New Dehli, India</label>
-                          </div>
+                              <input id="risultato_a" type="radio" name="quizzolo"
+                                    checked>
+                              <label  id="risultato_a1" for="a">Rome, Italy</label>
+                            </div>
+                            
+                            <div>
+                              <input  id="risultato_b" type="radio" name="quizzolo">
+                              <label  id="risultato_b1" for="b">New York, United States</label>
+                            </div>
+                            
+                            <div>
+                              <input id="risultato_c" type="radio" name="quizzolo">
+                              <label  id="risultato_c1" for="c">New Dehli, India</label>
+                            </div>
 
-                          <div>
-                            <input id="risultato_d" type="radio" name="quizzolo">
-                            <label  id="risultato_d1" for="d">Chicago, United States</label>
-                          </div>
-                          <div>
-                            <button onclick="funzione_gioco()" class="bottone_quiz" type="button">Submit</button>
-                          </div>
-                        </form>
-                </div>
+                            <div>
+                              <input id="risultato_d" type="radio" name="quizzolo">
+                              <label  id="risultato_d1" for="d">Chicago, United States</label>
+                            </div>
+                            <div>
+                              <button onclick="funzione_gioco()" class="bottone_quiz" type="button">Submit</button>
+                            </div>
+                          </form>
+                  </div>
 
-                <a-scene id="scenetta" embedded class="gioco">
-                    <a-entity id="cam" camera="zoom: 1" look-controls="reverseMouseDrag: true"></a-entity>
-                    <a-sky id="panorama1" src="assets/game/niente.jpg" rotation="0 -90 0"></a-sky>
-                </a-scene>
-            </div>
-      </div>
-  </body>
-</html>
+                  <a-scene id="scenetta" embedded class="gioco">
+                      <a-entity id="cam" camera="zoom: 1" look-controls="reverseMouseDrag: true"></a-entity>
+                      <a-sky id="panorama1" src="assets/game/niente.jpg" rotation="0 -90 0"></a-sky>
+                  </a-scene>
+              </div>
+        </div>
+    </body>
+  </html>

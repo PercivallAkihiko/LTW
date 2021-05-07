@@ -22,6 +22,5 @@ function funzione_iniziale(){
         funzione_gioco();
     }
 });
-
 }
   
