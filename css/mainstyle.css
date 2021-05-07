@@ -1,0 +1,502 @@
+body,html
+{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: "Noto Sans KR",sans-serif;
+    color: white;
+
+    overflow: hidden;   
+}
+
+.shadowUp
+{
+  transform: translateY(-100%);
+}
+
+.shadow
+{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+
+  z-index: 6;
+  transition: all 0.6s ease-in-out;
+}
+
+.alert
+{  
+  transform: translate(-50%, -50%);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  background-color: transparent;
+  padding: 0;
+
+  display: grid;
+}
+
+.alertContainer
+{
+  grid-row: 1/1;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-row-gap: 10px;
+  
+  z-index: 5;
+
+  color: black;
+  padding: 0px 10px 10px 10px;
+}
+
+.fakeBack
+{
+  transform: translate(-50%, -50%);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  background-color: trasparent;
+  padding: 0;
+
+  display: grid;
+  grid-template-rows: 50px auto;
+
+  grid-row: 1/1;
+}
+
+.alertTop
+{  
+  text-align: center;
+  color: white;
+}
+
+.alertText, .alertTitle, .alertBtn
+{
+  width: 100%;
+  text-align: center;
+}
+
+.alertTitle
+{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.circleWrapper{
+  margin: auto;
+  background-color: rgb(0, 185, 146);
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+.circle
+{
+  font-size: 75px;
+  padding: 12.5px;
+}
+
+.back1
+{
+  background-color: transparent;
+}
+
+.back2
+{
+  border-radius: 7px;
+  background-color: white;
+}
+
+.wrapper
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  inset: 0px;
+  display: grid;
+  grid-template-rows: 50px auto;
+  background-color: trasparent;
+  background-size: cover;
+
+  z-index: 5;
+}
+
+.background
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+
+  z-index: 1;
+  display: block;
+}
+
+.top_bar
+{
+    background-color: rgba(0,0,0,.3);
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.logo
+{
+    background-color: transparent;
+    grid-column: 1/1;
+
+    display: grid;
+    grid-template-columns: 50px auto;
+}
+
+.logo img
+{
+  width: 45px;
+  height: 45px;
+
+  margin-top: auto;
+  margin-bottom: auto;
+  cursor: pointer;
+}
+
+.logo testo_logo{
+  color: white;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-left: 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.menu
+{
+    grid-column: 3/3;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-content:flex-end;
+    margin-left: auto;
+
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.menu a
+{
+  float: left;
+  display: block;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+
+  width: 80px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu a:hover
+{
+  color: rgb(0, 185, 146);
+}
+
+.switchButton
+{
+  grid-column: 3/3;
+  grid-row: 1/1;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.page
+{
+    display: grid;
+    grid-template-columns: 800px auto 260px;
+    background-color: transparent;
+
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%
+}
+
+@media (max-width:1240px){
+    .page
+    {
+        grid-template-columns: 700px auto 260px;
+    }
+}
+
+@media (max-width:1105px){
+    .page
+    {
+        grid-template-columns: 500px auto 260px;
+    }
+}
+
+@media (max-width:870px){
+    .page
+    {
+        grid-template-columns: 260px auto 260px;
+    }
+}
+
+.text-area
+{
+  grid-column: 1/1;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-row-gap: 20px;
+}
+
+.text-area h1
+{
+  margin: 0px;
+}
+
+.text-area line
+{
+  border-bottom: solid 1px white;
+}
+
+.error, .login_error
+{
+   color:rgb(255, 17, 17);
+   font-weight: bold;
+   font-size: 13px;
+}
+
+.signUpError
+{
+   grid-column: 1/-1;
+}
+
+.moveLeft
+{
+  transform: translateX(200%)
+}
+
+.moveUp
+{
+  /*animation: move-up 0.5s ease-in-out;*/
+  transform: translateY(-100%)
+}
+
+.login
+{
+  grid-row: 1/1;
+  grid-column: 3/3;
+  padding-left: 15px;
+  padding-right: 15px ;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: rgba(0,0,0,.3);
+
+  margin-top: auto;
+  margin-bottom: auto;
+  box-shadow: 5px 5px 5px #000000;  
+  transition: all 0.8s ease-in-out;
+}
+
+.login_content
+{
+  display: grid;
+  grid-template-rows: repeat(6, auto);
+  grid-row-gap: 10px;
+}
+
+.login_error
+{
+  display: none;
+}
+
+.sign_up_content
+{
+  display: grid;
+  grid-template-rows: repeat(8, auto);
+  grid-row-gap: 10px;
+}
+
+.login loginTop, .sign_up sign-upTop
+{
+  align-self: center;
+  text-align: center;
+  border-bottom: solid 1px white;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.inputbox
+{
+  display: grid;
+  grid-template-columns: 25px  auto;
+  grid-template-rows: auto auto;
+}
+
+.inputbox input
+{
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: white;
+  padding: 15px;
+}
+
+.inputbox input:focus
+{
+  outline-width: 0;
+}
+
+.inputbox i
+{
+  align-self: center;
+  text-align: center;
+}
+
+.btn-login, .btn-sign_up, .btn-alert, .btn-tutorial
+{
+  border: none;
+  cursor: pointer;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 150px;
+  font-weight: bold;
+  color: black;
+  background-color: rgb(0, 185, 146);
+  text-align: center;
+  align-self: center;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition-duration: 0.30s;
+}
+
+.btn-login:hover, .btn-tutorial:hover, .btn-sign_up:hover
+{
+  background-color:white;
+}
+
+.btn-alert
+{
+  width: 100%;
+  border-radius: 5px;  
+  color: black;
+}
+
+.btn-tutorial
+{
+  margin-left: 0;
+  background-color: transparent;
+  color: white;
+  border: white solid 2px;
+}
+
+.btn-tutorial:hover
+{
+  color: black;
+}
+
+.btn-alert:hover
+{
+  background-color: rgb(0, 228, 178);
+}
+
+
+iconwrapper
+{
+  text-align: center;
+  border-top: solid 1px white;
+  padding: 20px;
+}
+
+iconwrapper i
+{
+  padding-left: 15px;
+  padding-right: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.scelta
+{
+  padding-left: 15px;
+  width: 100%;
+  background-color: transparent;
+}
+
+.nazione
+{
+  margin-top: 10px;
+}
+
+select.icon-menu option {
+  
+  background-repeat:no-repeat;
+  background-position:bottom left;
+  padding-left:30px;
+}
+
+.icon-menu
+{
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  height: 100%;  
+}
+
+option[value=""][disabled] {
+  display: none;
+}
+option {
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+select
+{
+  margin-top: auto;
+  margin-bottom: auto;
+  color: grey;
+}
+
+select:focus
+{
+  border:none;
+}
+
+.sign_up
+{
+  grid-row: 1/1;
+  grid-column: 3/3;
+  padding-left: 15px;
+  padding-right: 15px ;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: rgba(0,0,0,.3);
+
+  margin-top: auto;
+  margin-bottom: auto;
+  box-shadow: 5px 5px 5px #000000;
+  transition: all 0.8s ease-in-out;
+}

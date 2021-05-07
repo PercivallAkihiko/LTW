@@ -1,0 +1,147 @@
+body,html
+{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: "Noto Sans KR",sans-serif;
+    color: white;
+    overflow: hidden;   
+    
+    display: grid;
+}
+
+.right
+{
+    transform: translateX(100%);
+}
+
+.left
+{
+    transform: translateX(-100%);
+}
+
+.background
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+
+  z-index: 1;
+  display: block;
+}
+
+.menu, .option
+{
+    grid-column: 1/1;
+    grid-row: 1/1;
+
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+}
+
+.top
+{
+    position: absolute;    
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-column-gap: 10px;
+
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.top i
+{
+    margin: auto;
+    cursor: pointer;
+}
+
+.option i
+{
+    position: absolute;  
+    right: 0;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    margin: auto;
+    cursor: pointer;    
+}
+
+.option i:hover, .top i:hover, .username:hover
+{
+    transition: all 0.3s ease-in-out;
+}
+
+.option i:hover, .top i:hover, .username:hover
+{
+    color: rgb(0, 185, 146);
+}
+
+.username
+{
+    cursor:default;
+}
+
+.play, .option_wrapper
+{
+    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+
+.play
+{
+    text-align: center;
+  
+    display: grid;
+
+    border: none;
+    cursor: pointer;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 230px;
+    font-weight: bold;
+    color: black;
+    background-color: rgb(0, 185, 146); 
+    font-size: 16px;
+    border-radius: 5px;
+    transition-duration: 0.30s;
+}
+
+.play:hover
+{
+    background-color: transparent;
+    border: white 2px solid;
+    color: white;
+    width: 250px;
+}
+
+.option_wrapper
+{
+    display: grid;
+    grid-template-rows: repeat(3, auto);    
+    grid-row-gap: 10px;
+}
+
+.option_wrapper img
+{
+    margin: auto;
+    height: 150px;
+    width: 150px;
+}
+
+.user_div
+{
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+

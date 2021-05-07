@@ -1,0 +1,44 @@
+.state_bar
+{
+    z-index: 2;
+    background-color: blueviolet;
+    position: absolute;
+    right: 5rem;
+}
+
+.round_numero
+{
+    font-size: 30px;
+}
+
+.vite_bar
+{
+    z-index: 3;
+    background-color: black;
+    left: 5rem;
+    position: absolute;
+}
+
+.vite_testo
+{
+    font-size: 30px;
+}
+
+.quiz_body
+{
+    z-index: 3;
+    border: 15px solid green;
+    position: absolute;
+    top: 30rem;
+    bottom: 25rem;
+    right: 5rem;
+    background: green;
+    height: 300px;
+    font-size: 24px;
+}
+
+.bottone_quiz
+{
+    height: 50px;
+    width: 100px;
+}
