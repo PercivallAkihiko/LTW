@@ -218,6 +218,7 @@ function funzione_gioco(){
     alert("giusto");
     avanti_streak++;       
     document.getElementById('streak').innerHTML=avanti_streak;
+    document.getElementById('streak1').innerHTML=avanti_streak;
   }
   else
   {
@@ -264,8 +265,8 @@ function funzione_gioco(){
   }
   if (vite_rimanenti == 0)
   {
-    proviamoci();
-    alert("sei una sega hai perso!");
+    $('shadow').toggleClass('up');
+    window.location.href = "php/fine_partita.php";
     //window.location.replace("localhost");
   }
   primo_round = false;
