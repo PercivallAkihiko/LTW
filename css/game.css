@@ -26,16 +26,17 @@ body,html
 .vite_bar
 {
     z-index: 3;
-    color: white;
-
     display: grid;
-    grid-template-columns: 20px 20px auto 20px 20px;
-    grid-column-gap: 2px;
+    grid-template-columns: repeat(4, auto);
+    grid-column-gap: 5px;
+    padding: 3px 5px 3px 5px;
+    border-radius: 5px;
+    position: fixed;
+    left: 0;
 
     font-size: 20px;
-    width: 500px;
-
-    background-color: green;
+    color: white;
+    background-color: rgb(0, 0, 0, 0.9);
 }
 
 .vite_testo, .vite_bar i
@@ -64,21 +65,25 @@ body,html
     font-size: 16px;
 
     display: grid;
-    grid-template-rows: repeat(2, auto);    
     grid-row-gap: 5px;
 }
 
 .quiz_body form
 {    
     display: grid;
-    grid-template-columns: repeat(4, 310px) auto;
+    grid-template-columns: repeat(4, auto) 50px;
     grid-column-gap: 5px;
+}
+
+@media (max-width:1296px){
+    .quiz_body form
+    {    
+    }
 }
 
 .inputBox
 {
     background-color: transparent;
-    text-align: center;
 
     cursor: pointer;
     border-radius: 5px;
@@ -91,13 +96,22 @@ body,html
     display: flex;
     justify-content: center;
     align-content: center;
+    text-align: center;
     flex-direction: column;
     padding: 5px;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.inputBox:hover
+{
+    border: 1.5px solid rgb(0, 185, 146);
+    color: rgb(0, 185, 146);
 }
 
 .bottone_quiz
 {
-    height: 50px;
+    height: 100%;
     width: 100%;
     background: transparent;
     border: none;
@@ -105,12 +119,17 @@ body,html
 
     color: white;
 
-    transition: all 0.2s linear;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 .bottone_quiz:hover
 {
-    font-size: 40px;
     color: rgb(0, 185, 146);
 }
 
