@@ -23,4 +23,6 @@
 
      $data['user'] = $user;
      echo json_encode($data);
+     pg_free_result($result);
+     pg_close($dbconn);
 ?>
