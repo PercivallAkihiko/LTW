@@ -265,6 +265,7 @@ function funzione_gioco(){
   }
   if (vite_rimanenti == 0)
   {
+    var username = localStorage.getItem("username");
     $('shadow').toggleClass('up');
     window.location.href = "php/fine_partita.php";
     //window.location.replace("localhost");
