@@ -23,8 +23,11 @@
 
         <div class="shadow up" id="shadow">
           <div class="alert">
-            <div id="streak1" class="round_numero">merda</div>
-            <button class="btn-alert" id="btn-alert" onclick="end_game()"> cane</button>
+            <form action="php/fine_partita.php" method="POST">
+              <input type="hidden" name="streak1" id="streak1" value="0">
+              <input type="hidden" name="username" id="username">
+              <input type="submit" value="continua" class="btn-alert" name="loginButton">              
+            </form>            
           </div>
         </div>
 

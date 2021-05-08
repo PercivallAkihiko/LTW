@@ -1,8 +1,3 @@
-function end_game()
-{
-    console.log("cane");
-}
-
 var avanti_streak=0;
 var vite_rimanenti=3;
 var randomnumber=1;
@@ -222,7 +217,7 @@ function funzione_gioco(){
     alert("giusto");
     avanti_streak++;       
     document.getElementById('streak').innerHTML=avanti_streak;
-    document.getElementById('streak1').innerHTML=avanti_streak;
+    document.getElementById("streak1").value = avanti_streak;
   }
   else
   {
@@ -271,6 +266,7 @@ function funzione_gioco(){
   {
     var username = localStorage.getItem("username");
     $('.shadow').toggleClass('up');
+    document.getElementById("username").value = username;
     //window.location.replace("localhost");
   }
   primo_round = false;
