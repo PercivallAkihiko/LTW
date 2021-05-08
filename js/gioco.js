@@ -267,7 +267,6 @@ function funzione_gioco(){
   {
     var username = localStorage.getItem("username");
     $('shadow').toggleClass('up');
-    window.location.href = "php/fine_partita.php";
     //window.location.replace("localhost");
   }
   primo_round = false;
