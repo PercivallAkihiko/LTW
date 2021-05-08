@@ -1,3 +1,4 @@
+
 var avanti_streak=0;
 var vite_rimanenti=3;
 var randomnumber=1;
@@ -263,8 +264,9 @@ function funzione_gioco(){
   }
   if (vite_rimanenti == 0)
   {
+    proviamoci();
     alert("sei una sega hai perso!");
-    window.location.replace("localhost");
+    //window.location.replace("localhost");
   }
   primo_round = false;
 }
