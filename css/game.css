@@ -147,3 +147,23 @@ input
     display: none;
 }
 
+.up
+{
+    transform: translateY(100%);
+}
+
+.shadow
+{
+    z-index: 4;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: green;
+
+    transition: all 1s ease-in-out;
+}
+
