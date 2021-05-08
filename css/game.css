@@ -1,3 +1,14 @@
+body,html
+{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: "Noto Sans KR",sans-serif;
+    color: white;
+
+    overflow: hidden;   
+}
+
 .state_bar
 {
     z-index: 2;
@@ -6,39 +17,133 @@
     right: 5rem;
 }
 
-.round_numero
+.wrapper
 {
-    font-size: 30px;
+    height: 100%;
+    width: 100%;
 }
 
 .vite_bar
 {
     z-index: 3;
-    background-color: black;
-    left: 5rem;
-    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-column-gap: 5px;
+    padding: 3px 5px 3px 5px;
+    border-radius: 5px;
+    position: fixed;
+    left: 0;
+
+    font-size: 20px;
+    color: white;
+    background-color: rgb(0, 0, 0, 0.9);
 }
 
-.vite_testo
+.vite_testo, .vite_bar i
 {
-    font-size: 30px;
+    color: red;
+}
+
+.quiz_wrapper
+{
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, 0.9);
+    
+    padding: 5px;
 }
 
 .quiz_body
 {
-    z-index: 3;
-    border: 15px solid green;
-    position: absolute;
-    top: 30rem;
-    bottom: 25rem;
-    right: 5rem;
-    background: green;
-    height: 300px;
-    font-size: 24px;
+    z-index: 3;  
+    background-color: transparent;
+    
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+
+    display: grid;
+    grid-row-gap: 5px;
+}
+
+.quiz_body form
+{    
+    display: grid;
+    grid-template-columns: repeat(4, auto) 50px;
+    grid-column-gap: 5px;
+}
+
+@media (max-width:1296px){
+    .quiz_body form
+    {    
+    }
+}
+
+.inputBox
+{
+    background-color: transparent;
+
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1.5px solid grey;
+
+    font-weight: bold;
+    color: grey;
+    transition: all 0.3s ease-in-out;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 5px;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.inputBox:hover
+{
+    border: 1.5px solid rgb(0, 185, 146);
+    color: rgb(0, 185, 146);
 }
 
 .bottone_quiz
 {
-    height: 50px;
-    width: 100px;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+
+    color: white;
+
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
+
+.bottone_quiz:hover
+{
+    color: rgb(0, 185, 146);
+}
+
+#risultato_a:checked:checked ~ .option-1,
+#risultato_b:checked:checked ~ .option-2,
+#risultato_c:checked:checked ~ .option-3,
+#risultato_d:checked:checked ~ .option-4{
+  border-color: rgb(0, 185, 146);
+  background: rgb(0, 185, 146);
+  color: white;
+}
+
+input
+{
+    display: none;
+}
+
