@@ -1,3 +1,7 @@
+function end_game()
+{
+    console.log("cane");
+}
 
 var avanti_streak=0;
 var vite_rimanenti=3;
@@ -266,7 +270,7 @@ function funzione_gioco(){
   if (vite_rimanenti == 0)
   {
     var username = localStorage.getItem("username");
-    $('shadow').toggleClass('up');
+    $('.shadow').toggleClass('up');
     //window.location.replace("localhost");
   }
   primo_round = false;

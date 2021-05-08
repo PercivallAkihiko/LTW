@@ -149,7 +149,7 @@ input
 
 .up
 {
-    transform: translateY(100%);
+    transform: translateY(-100%);
 }
 
 .shadow
@@ -167,3 +167,10 @@ input
     transition: all 1s ease-in-out;
 }
 
+.btn-alert
+{
+    width: 100px;
+    height: 100px;
+
+    background-color: yellow;
+}

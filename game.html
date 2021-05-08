@@ -11,16 +11,20 @@
         <link rel="stylesheet" type="text/css" href="css/game.css">
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.2.0/aframe.min.js"></script>
         <script type="text/javascript" src="js/gioco.js"></script>
+        <script type="text/javascript" src="js/gioco2.js"></script>
         <script type="text/javascript" src="js/load_json.js"></script>        
         <script type="text/javascript" src="js/mouse_wheel.js"></script>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     </head>
 
     <body onload="funzione_iniziale()">      
       <div class="wrapper">
 
-        <div class="shadow up">
+        <div class="shadow up" id="shadow">
           <div class="alert">
             <div id="streak1" class="round_numero">merda</div>
+            <button class="btn-alert" id="btn-alert" onclick="end_game()"> cane</button>
           </div>
         </div>
 
