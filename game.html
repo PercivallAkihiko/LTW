@@ -11,19 +11,24 @@
         <link rel="stylesheet" type="text/css" href="css/game.css">
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.2.0/aframe.min.js"></script>
         <script type="text/javascript" src="js/gioco.js"></script>
-        <script type="text/javascript" src="js/load_json.js"></script>
-        <script type="text/javascript" src="prova.js"></script>
+        <script type="text/javascript" src="js/load_json.js"></script>        
         <script type="text/javascript" src="js/mouse_wheel.js"></script>
     </head>
 
     <body onload="funzione_iniziale()">      
       <div class="wrapper">
 
+        <div class="shadow up">
+          <div class="alert">
+            <div id="streak1" class="round_numero">merda</div>
+          </div>
+        </div>
+
         <div class="vite_bar">          
           <div id=vite_rimaste class="vite_testo">3</div>
           <i class="fas fa-heart"></i>
           <div>Punteggio:</div>
-          <div id=streak class="round_numero">0</div>
+          <div id="streak" class="round_numero">0</div>
         </div>
 
         <div class="quiz_wrapper">
