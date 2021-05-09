@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/63209a46b9.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="css/mainstyle.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&amp;display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/63209a46b9.js" crossorigin="anonymous"></script>    
+    <script type="text/javascript" src="/js/vue.js"></script>
+    <script type="text/javascript" src="/js/ranking.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/ranking.css">
     <title>homepage</title>
 </head>
   <body>
@@ -25,7 +28,14 @@
             </div>
 
           <div class="page">
-
+            <div class="leaders">
+                <div class="leader"></div>
+                <div class="leader"></div>
+                <div class="leader"></div>
+            </div>
+            <div class="players" id="cane">
+                <div class="player" v-for="user in users">{{user.username}}</div>
+            </div>
           </div>
       </div>
   </body>
