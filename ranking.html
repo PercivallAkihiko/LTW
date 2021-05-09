@@ -33,10 +33,10 @@
             <div class="leaders_back">
                 <div class="leaders">
                     <div class="leader" v-for="user in users.slice(0, 3)">
-                        <img src={{user.nationality}} id="user_profile">
+                        <img v-bind:src="user.nationality" id="user_profile">
                         <div class="username">{{user.username}}</div>
-                        <div class="score">{{user.highscore}}</div>
-                        <div class="low_bar">{{user.username}}</div>
+                        <div class="score">Punteggio: {{user.highscore}}</div>
+                        <div class="low_bar">{{user.totale_matches}}</div>
                     </div>
                 </div>
             </div>
