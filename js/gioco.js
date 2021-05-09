@@ -29,16 +29,10 @@ if (vite_rimanenti > 0)
   {
     randomnumber = Math.floor(Math.random() * (numero_foto - 1 + 1)) + 1;
   }
-  console.log(randomnumber);
   controllo_foto.push(randomnumber);
   if (controllo_foto.length - 1 == numero_foto - 1)
   {
     controllo_foto = new Array();
-    console.log("---------");
-  }
-  else
-  {
-    console.log("LENGHT : " + controllo_foto.length);
   }
   var prova = document.getElementById('panorama1');
   prova.parentNode.removeChild(prova);
