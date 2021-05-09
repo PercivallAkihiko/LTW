@@ -21,7 +21,8 @@
             <div class="top">
                 <i class="fas fa-cog" id="open_option"></i> 
                 <div class="username" id="username">Username,</div>
-            </div>
+            </div>            
+            <div class="logout" id="logout">Logout</div>
             <div class="play" id="play">
                 PLAY
             </div>

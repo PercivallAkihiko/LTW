@@ -1,5 +1,12 @@
 $(document).ready(function () {
 
+   var username = localStorage.getItem("username");
+   var nationality = localStorage.getItem("nationality")
+
+   if (username !== null){
+       window.location.href = "menu.php";
+   }
+
    document.getElementById("btn-alert").onclick = function() {
       console.log("ok has been clicked");     
       $('.shadow').toggleClass('shadowUp');

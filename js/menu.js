@@ -21,6 +21,11 @@ $(document).ready(function () {
         option_toggle();
     };  
 
+    document.getElementById("logout").onclick = function() {
+        localStorage.clear();   
+        window.location.href = "index.php"; 
+    };  
+
     document.getElementById("play").onclick = function() {
         window.location.href = "game.html";
     };  

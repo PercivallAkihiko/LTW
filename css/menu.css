@@ -49,12 +49,13 @@ body,html
     top: 0;
     left: 0;
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(3, auto);
     grid-column-gap: 10px;
 
     color: white;
     padding: 10px;
     font-size: 18px;
+
 }
 
 .top i
@@ -74,19 +75,28 @@ body,html
     cursor: pointer;    
 }
 
-.option i:hover, .top i:hover, .username:hover
+.option i:hover, .top i:hover, .username:hover, .logout:hover
 {
     transition: all 0.3s ease-in-out;
-}
-
-.option i:hover, .top i:hover, .username:hover
-{
     color: rgb(0, 185, 146);
 }
 
 .username
 {
     cursor:default;
+}
+
+.logout
+{
+    position: fixed;
+    right: 0;
+    top: 0;
+
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+
+    cursor: pointer;
 }
 
 .play, .option_wrapper
