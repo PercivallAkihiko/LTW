@@ -5,18 +5,16 @@
      $query="select * from users where username= $1";
      $result=pg_query_params($dbconn, $query, array($username));
 
-
      if (!($line=pg_fetch_array($result, null, PGSQL_ASSOC))){
           echo "errore!";                
      }
      else 
      {
           $highscore = $line['highscore'];
-          $partite_giocate = $line['total_matches'];
+          $partite_giocate = $line['total_matches'] + 1;
      }
 
      if($streak > $highscore) $highscore = $streak;
-     $partite_giocate += 1;
 
      $query="UPDATE users SET total_matches='$partite_giocate', highscore='$highscore' WHERE username='$username'";
      $result=pg_query($dbconn,$query);
