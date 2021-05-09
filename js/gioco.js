@@ -226,6 +226,8 @@ function funzione_gioco(){
     alert("sbagliato");
   } 
 }
+if (vite_rimanenti > 0)
+{
   randomnumber = Math.floor(Math.random() * (numero_foto - 1 + 1)) + 1;
   while (controllo_foto.includes(randomnumber) == true)
   {
@@ -249,8 +251,6 @@ function funzione_gioco(){
   prova2.setAttribute('src', myQuestions[randomnumber-1].file);
   prova2.setAttribute('rotation', "0 -90 0");
   document.getElementById("scenetta").appendChild(prova2);
-
-  //document.querySelector('#panorama1').setAttribute('src', myQuestions[randomnumber-1].file);
   var alphabet = "abcd";
   var emptyString = alphabet[Math.floor(Math.random() * alphabet.length)];
   document.getElementById("risultato_"+emptyString+"1").innerHTML=myQuestions[randomnumber-1].correctAnswer;
@@ -262,12 +262,12 @@ function funzione_gioco(){
       document.getElementById("risultato_"+alphabet.charAt(i)+"1").innerHTML= data2.country[randomnumber2];
     }
   }
+}
   if (vite_rimanenti == 0)
   {
     var username = localStorage.getItem("username");
     $('.shadow').toggleClass('up');
     document.getElementById("username").value = username;
-    //window.location.replace("localhost");
   }
   primo_round = false;
 }
