@@ -51,9 +51,12 @@
 
           <div class="page">
               <div class="text-area">
-                <h1>86-エイティシックス</h1>
+                <h1>SPOTME</h1>
                 <line></line>
-                <text>The Republic of San Magnolia has been at war with the Empire of Giad for nine years. Though it initially suffered devastating losses to the Empire's autonomous mechanized Legions, The Republic has since developed its own autonomous units, called Juggernauts, which are directed remotely by a Handler. While on the surface the public believes the war is being fought between machines, in reality, the Juggernauts are being piloted by humans, all of whom are "86s" -- the designation given to the Colorata minority of San Magnolia. 86s originally had equal rights, but were persecuted and scapegoated by the dominant Alba race and the Alba-supremacist Republic government to the point where Colorata were both officially designated and popularly considered subhuman. 86s were not permitted to have personal names and were immured in internment camps in the 86th District (their namesake); all the while being forced to fight in the Republic's war with the Empire to receive better treatment.</text>
+                <text>Spotme è un gioco per Browser di scoperta geografica che richiede ai giocatori di indovinare la posizione nel mondo usando sono gli indizi visibili.
+                  All'utente viene mostrata una foto a 360° scelta a mano da Google Street View che ritrae luoghi famosi nelle città come monumenti, attrazioni e location
+                  di rilievo. Il giocatore ha a disposizione tre vite e utilizzando la propria padronanza geografica deve rispondere attraverso quattro scelte disponibili.  
+                </text>
                 <div class="btn-tutorial">
                   Tutorial
                 </div>
