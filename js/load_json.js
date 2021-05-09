@@ -12,6 +12,9 @@ function readTextFile(file, callback) {
 
 
 var data2;
+var data4;
+var myQuestions;
+var numero_foto;
 
 function funzione_iniziale(){
   readTextFile("assets/cities.json", function(text){
@@ -19,7 +22,17 @@ function funzione_iniziale(){
     data2= data;
     if (data2.country != undefined)
     {
-        funzione_gioco();
+      readTextFile("assets/city_file.json", function(text1){
+
+        var data3 =  JSON.parse(text1);
+        data4= data3;
+        myQuestions = data4.mlml;
+        if (myQuestions != undefined)
+        { 
+          numero_foto=myQuestions.length;
+          funzione_gioco();
+        }
+    });
     }
 });
 }
