@@ -10,12 +10,11 @@
         <script src="https://kit.fontawesome.com/63209a46b9.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="css/game.css">
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.2.0/aframe.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script type="text/javascript" src="js/gioco.js"></script>
         <script type="text/javascript" src="js/gioco2.js"></script>
         <script type="text/javascript" src="js/load_json.js"></script>        
-        <script type="text/javascript" src="js/mouse_wheel.js"></script>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="js/mouse_wheel.js"></script>        
     </head>
 
     <body onload="funzione_iniziale()">      
@@ -41,7 +40,7 @@
 
         <div class="quiz_wrapper">
           <div class="quiz_body">
-            <form>
+            <form id="quiz">
               <input id="risultato_a" type="radio" name="quizzolo" checked>
               <input  id="risultato_b" type="radio" name="quizzolo">
               <input id="risultato_c" type="radio" name="quizzolo">
