@@ -1,0 +1,104 @@
+.wrapper
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  inset: 0px;
+  display: grid;
+  grid-template-rows: 50px auto;
+  background-color: trasparent;
+  background-size: cover;
+
+  z-index: 5;
+}
+
+.top_bar
+{
+    background-color: rgba(255,255,255);
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.logo
+{
+    background-color: transparent;
+    grid-column: 1/1;
+
+    display: grid;
+    grid-template-columns: 50px auto;
+}
+
+.logo img
+{
+  width: 45px;
+  height: 45px;
+
+  margin-top: auto;
+  margin-bottom: auto;
+  cursor: pointer;
+}
+
+.logo testo_logo{
+    color: rgb(1, 6, 6);
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: 0;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+.menu
+{
+    grid-column: 3/3;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-content:flex-end;
+    margin-left: auto;
+
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.menu a
+{
+  float: left;
+  display: block;
+  font-size: 16px;
+  color: rgb(1, 6, 6);
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+
+  width: 80px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu a:hover
+{
+  color: rgb(0, 185, 146);
+}
+
+
+
+.black_page
+{
+    height: 800px;
+    width: 100%;
+    background: rgb(1, 6, 6);
+}
+
+.white_page
+{
+    height: 800px;
+    width: 100%;
+    background: rgb(249, 249, 249);
+
+}
