@@ -30,12 +30,17 @@ body,html
 .top_bar
 {
     grid-column: 1/-1;
-    background-color: rgba(0,0,0,.3);
+    background-color: green;
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: auto 1000px auto;
 
-    padding-left: 5%;
-    padding-right: 5%;
+}
+
+.top_bar_wrapper
+{
+  grid-column: 2;  
+  display: grid;
+  grid-template-columns: auto auto;
 }
 
 .logo
@@ -110,27 +115,31 @@ body,html
 
 .page
 {
-    grid-column: 2;
+    grid-column: 1/-1;
     display: grid;
     grid-template-rows: repeat(2, auto);
+    grid-template-columns: auto 1000px auto;
 }
 
-.padding
+.leaders_back
 {
-    width: 100%;
-    height: 100%;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: auto 1000px auto;
 }
 
 .leaders
 {
-    background-color: black;
-    width: 100%;    
-    margin-top: 5px;
-    padding: auto;
+  grid-column: 2;
 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 10px;
+  background-color: black;
+  width: 100%;    
+  margin-top: 5px;
+  padding: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
 }
 
 .leader
@@ -143,11 +152,19 @@ body,html
     grid-template-rows: repeat(4, auto);
 }
 
+.players_back
+{
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: auto 1000px auto;
+}
+
 .players
 {
-    margin-top: 15px;
-    background-color: yellow;
-    color: black;
-    width: 100%;
-    height: 100%;
+  grid-column: 2;
+  margin-top: 15px;
+  background-color: yellow;
+  color: black;
+  width: 100%;
+  height: 100%;
 }

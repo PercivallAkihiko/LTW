@@ -44,13 +44,25 @@ body,html
     color: red;
 }
 
+.vite_bar i
+{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: column;
+
+    font-size: 20px;
+}
+
 .quiz_wrapper
 {
     z-index: 3;
     position: fixed;
     width: 100%;
     bottom: 0;
-    background-color: rgb(0, 0, 0, 0.9);
+    background-color: transparent;
     
     padding: 5px;
 }
@@ -87,10 +99,11 @@ body,html
 
     cursor: pointer;
     border-radius: 5px;
-    border: 1.5px solid grey;
+    border: 2px solid rgb(0, 185, 146);
 
     font-weight: bold;
     color: grey;
+    background-color: rgb(0, 0, 0, 0.9);
     transition: all 0.3s ease-in-out;
 
     display: flex;
@@ -105,7 +118,7 @@ body,html
 
 .inputBox:hover
 {
-    border: 1.5px solid rgb(0, 185, 146);
+    border: 2px solid rgb(0, 185, 146);
     color: rgb(0, 185, 146);
 }
 
@@ -117,7 +130,7 @@ body,html
     border: none;
     font-size: 30px;
 
-    color: white;
+    color: black;
 
     transition: all 0.5s ease-in-out;
     cursor: pointer;
