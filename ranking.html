@@ -15,28 +15,31 @@
 </head>
   <body>
       <div class="wrapper">
-          <div class="top_bar">
-              <div class="logo">
-                  <img src="assets/logo.png">
-                  <testo_logo> SPOTME </testo_logo>
-              </div>
-                <div class="menu">
-                    <a href="tutorial.html">TUTORIAL</a>
-                    <a href="ranking.html">RANKING</a>
-                    <a href="index.php">LOGIN</a>
+        <div class="top_bar">
+            <div class="logo">
+                <img src="assets/logo.png">
+                <testo_logo> SPOTME </testo_logo>
+            </div>
+            <div class="menu">
+                <a href="tutorial.html">TUTORIAL</a>
+                <a href="ranking.html">RANKING</a>
+                <a href="index.php">LOGIN</a>
+            </div>
+        </div>
+
+        <div class="page" id="app">
+            <div class="leaders">
+                <div class="leader" v-for="user in users.slice(0, 3)">
+                    <div class="img">{{user.nationality}}</div>
+                    <div class="username">{{user.username}}</div>
+                    <div class="score">{{user.highscore}}</div>
+                    <div class="menu">{{user.username}}</div>
                 </div>
             </div>
-
-          <div class="page">
-            <div class="leaders">
-                <div class="leader"></div>
-                <div class="leader"></div>
-                <div class="leader"></div>
+            <div class="players">
+                <div class="player" v-for="user in users.slice(3)">{{user.username}}</div>
             </div>
-            <div class="players" id="cane">
-                <div class="player" v-for="user in users">{{user.username}}</div>
-            </div>
-          </div>
+        </div>
       </div>
   </body>
 </html>

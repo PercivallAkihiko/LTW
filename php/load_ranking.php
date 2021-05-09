@@ -1,7 +1,5 @@
 <?php
      $dbconn = pg_connect("host=localhost port=5432 dbname=progetto user=postgres password=ciaomondo") or die("Could not connect: " . pg_last_error());
-
-     $data = [];
      $users = [];
 
      $query="select username, nationality, total_matches, highscore from users ORDER BY highscore DESC";
