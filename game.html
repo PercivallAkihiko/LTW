@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>game</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&amp;display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/63209a46b9.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="css/game.css">
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.2.0/aframe.min.js"></script>
@@ -22,14 +22,14 @@
       <div class="wrapper">
 
         <div class="shadow up" id="shadow">
-          <div class="alert">
-            <form action="php/fine_partita.php" method="POST">
-              <input type="hidden" name="streak1" id="streak1" value="0">
-              <input type="hidden" name="username" id="username">
-              <input type="submit" value="../game.html" class="btn-alert" name="link">              
-              <input type="submit" value="../menu.php" class="btn-alert" name="link">
-            </form>            
-          </div>
+          <form action="php/fine_partita.php" method="POST" class="alert">
+            <input type="hidden" name="streak1" id="streak1" value="0">
+            <input type="hidden" name="username" id="username">
+            <div class="alertTitle">Risultato</div>
+            <div class="alertText">Punteggio: </div>
+            <button type="submit" value="../game.html" class="btn-alert1" name="link">Gioca di nuovo</button>              
+            <button type="submit" value="../menu.php" class="btn-alert2" name="link">Esci</button> 
+          </form>            
         </div>
 
         <div class="vite_bar">          
