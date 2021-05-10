@@ -45,9 +45,7 @@ body,html
 {
   width: 45px;
   height: 45px;
-
-  margin-top: auto;
-  margin-bottom: auto;
+  padding-top: 2px;
   cursor: pointer;
 }
 
@@ -56,6 +54,7 @@ body,html
     margin-top: auto;
     margin-bottom: auto;
     margin-right: auto;
+    padding-bottom: 4px;
     margin-left: 0;
     font-size: 20px;
     cursor: pointer;
