@@ -83,7 +83,7 @@ body,html
 .quiz_body form
 {    
     display: grid;
-    grid-template-columns: repeat(4, auto) 50px;
+    grid-template-columns: repeat(4, 1fr) 50px;
     grid-column-gap: 5px;
 }
 
