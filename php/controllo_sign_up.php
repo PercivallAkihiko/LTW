@@ -23,7 +23,7 @@
       $errors['password'] = 'Le due password non coincidono!';
    }
 
-   if ($_POST['countries'] == "") {
+   if (empty($_POST['inputEmailSign'])) {
        $errors['countries'] = 'Inserisci una nazione!';
    }
 
@@ -48,16 +48,18 @@
             $nazione= $_POST['countries'];
             $q2= "insert into users values ($1, $2, $3, $4)";
             $resq= pg_query_params($dbconn, $q2, array($username, $email, $password, $nazione));
+            pg_free_result($resq);
             if ($resq){
                $data['success'] = true;
             }
          }
+         pg_free_result($result);
 
       }
    }
 
    $data['errors'] = $errors;
    echo json_encode($data);
-   pg_free_result($result);
+
    pg_close($dbconn);
 ?>
