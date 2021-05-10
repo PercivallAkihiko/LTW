@@ -38,7 +38,7 @@
                             <img v-bind:src="user.medal" class="user_medal">
                         </div>
                         <div class="username">{{user.username}}</div>
-                        <div class="score">Punteggio: {{user.highscore}}</div>
+                        <div class="score bold">Highscore: {{user.highscore}}</div>
                         <div class="low_bar">{{user.totale_matches}}</div>
                     </div>
                 </div>
@@ -47,13 +47,13 @@
             <div class="players_back">
                 <div class="players">
                     <div class="player">
-                        <div class="ranking">Posizione</div>
-                        <div style="text-align: center; margin: auto;">Immagine</div>
-                        <div class="username_low">Username</div>
-                        <div class="highscore_low">Punteggio</div>
-                        <div class="total_matches_low">Partite totali</div>
+                        <div class="title_low">Posizione</div>
+                        <div class="title_low" style="text-align: center; margin: auto;">Profilo</div>
+                        <div class="title_low">Username</div>
+                        <div class="title_low title_highscore">Highscore</div>
+                        <div class="title_low title_matches">Partite totali</div>
                     </div>
-                    <div class="player" v-for="user in users.slice(3)">
+                    <div class="player" v-for="user in users.slice(3, 50)">
                         <div class="ranking">#{{user.ranking}}</div>
                         <img class="user_profile_low" v-bind:src="user.nationality"></img>
                         <div class="username_low">{{user.username}}</div>

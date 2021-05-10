@@ -7,6 +7,11 @@ body,html
     background-color: black;   
 }
 
+.bold
+{
+  font-weight: bold;
+}
+
 .wrapper
 {
   position: absolute;
@@ -128,6 +133,7 @@ body,html
 
 .leaders
 {
+  margin-top: 20px;
   grid-column: 2;
 
   background-color: black;
@@ -180,6 +186,15 @@ body,html
 {
   font-size: 20px;
   font-weight: bold;
+  margin: auto;
+}
+
+.score
+{
+  background-color: rgb(0, 185, 146);
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+  margin: auto;
 }
 
 .players_back
@@ -187,6 +202,19 @@ body,html
   grid-column: 1/-1;
   display: grid;
   grid-template-columns: auto 1000px auto;
+}
+
+.title_low
+{
+  margin-top: auto;
+  margin-bottom: auto;
+
+  font-weight: bold;
+}
+
+.title_highscore, .title_matches
+{
+  margin: auto;
 }
 
 .players
@@ -209,8 +237,7 @@ body,html
   height: 35px;
   border-radius: 5px;
 
-  padding-left: 5px;
-  padding-right: 5px;
+  padding: 5px 10px 5px 10px;
 
   display: grid;
   grid-template-columns: 75px 130px 1fr 1fr 1fr;
@@ -233,4 +260,14 @@ body,html
   width: 25px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.highscore_low
+{
+  background-color: rgb(0, 185, 146);
+  font-weight: bold;
+  width: 100px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 15px;
+  margin: auto;
 }
