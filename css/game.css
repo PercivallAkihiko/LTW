@@ -146,6 +146,11 @@ body,html
     color: rgb(0, 185, 146);
 }
 
+.bottone_quiz:focus
+{
+    outline: none;
+}
+
 #risultato_a:checked:checked ~ .option-1,
 #risultato_b:checked:checked ~ .option-2,
 #risultato_c:checked:checked ~ .option-3,
