@@ -134,3 +134,9 @@ function toggle(){
    $('.sign_up').toggleClass('moveLeft');
    $('.switchButton').toggleClass('moveUp');
 };
+
+function ranking(){
+   $('html, body').animate({
+      scrollTop: $('#leaders').offset().top
+  }, 500);
+};

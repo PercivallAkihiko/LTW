@@ -243,13 +243,13 @@ body,html
   grid-template-columns: 75px 130px 1fr 1fr 1fr;
 }
 
-.ranking, .user_profile_low, .username_low, .highscore_low, .total_matches_low
+.position_low, .user_profile_low, .username_low, .highscore_low, .total_matches_low
 {
   margin-top: auto;
   margin-bottom: auto;
 }
 
-.ranking, .highscore_low, .total_matches_low
+.position_low, .highscore_low, .total_matches_low
 {
   text-align: center;
 }

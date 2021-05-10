@@ -54,7 +54,7 @@
                         <div class="title_low title_matches">Partite totali</div>
                     </div>
                     <div class="player" v-for="user in users.slice(3, 50)">
-                        <div class="ranking">#{{user.ranking}}</div>
+                        <div class="position_low">#{{user.ranking}}</div>
                         <img class="user_profile_low" v-bind:src="user.nationality"></img>
                         <div class="username_low">{{user.username}}</div>
                         <div class="highscore_low">{{user.highscore}}</div>
