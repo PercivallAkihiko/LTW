@@ -34,20 +34,19 @@
           </form>            
         </div>
 
-        <div class="giusto up" id="giusto">
+        <div class="giusto up" id="giusto" onclick="risposta_giusta()">
           <div class="alert_giusto">
+            <i class="fas fa-check circle"></i>
             <div class="alertTitle">GIUSTO!</div>
-            <div class="alertText">Ma andiamo avanti</div>
-            <button type="button" id="bottone_giusto" onclick="risposta_giusta()" class="bottone_giusto" >Continua</button>        
+            <div class="alertText">Ma andiamo avanti</div>            
           </div>           
         </div>
 
-        <div class="sbagliato up" id="sbagliato">
+        <div class="sbagliato" id="sbagliato" onclick="risposta_sbagliata()">
           <div class="alert_sbagliato">
+            <i class="fas fa-times"></i>
             <div class="alertTitle">SBAGLIATO!</div>
-            <div class="alertText">La risposta giusta era:</div>
-            <div class="alertText" id="risposta_esatta">empty</div>
-            <button type="button" id="bottone_sbagliato" onclick="risposta_sbagliata()" class="bottone_sbagliato" >Continua</button>        
+            <div class="alertText">La risposta giusta era: <t id="risposta_esatta"> <t></div>        
           </div>           
         </div>
 
