@@ -53,7 +53,7 @@
                       <div class="title_low">Username</div>
                       <div class="title_low title_center">Punteggio</div>
                       <div class="title_low title_center">Partite giocate</div>
-                      <i v-if="top + 50 < lenght" class="fas fa-forward title_low" v-on:click="next()"></i>
+                      <i v-if="top < lenght" class="fas fa-forward title_low" v-on:click="next()"></i>
                     </div>
                     <div class="line"></div>
                     <div class="player" v-for="user in users.slice(getLow(), getTop())">

@@ -238,7 +238,8 @@ body,html
 .title_low
 {
   font-weight: bold;
-  margin: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .title_center
@@ -265,7 +266,7 @@ body,html
   padding: 5px 10px 5px 10px;
 
   display: grid;
-  grid-template-columns: 20px 1fr 1fr 1fr 3fr 3fr 20px;
+  grid-template-columns: 20px 1fr 1fr 2fr 3fr 3fr 20px;
 }
 
 .control

@@ -49,7 +49,8 @@ window.onload = function () {
                 else return this.low;
             },
             getTop: function(){
-                return this.top;
+                if(this.top > lenght) return lenght;
+                else return this.top;
             },
         }
     });
