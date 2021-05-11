@@ -517,27 +517,27 @@ select:focus
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.front, .leaders, .players, .footer
+.top_bar, .front, .leaders, .players, .footer
 {
   grid-template-columns: auto 1200px auto;
 }
 
 @media screen and (max-width: 1360px){
-  .front, .leaders, .players, .footer
+  .top_bar, .front, .leaders, .players, .footer
   {
     grid-template-columns: auto 1000px auto;
   }
 }
 
 @media screen and (max-width: 1100px){
-  .front, .leaders, .players, .footer
+  .top_bar, .front, .leaders, .players, .footer
   {
     grid-template-columns: auto 750px auto;
   }
 }
 
 @media screen and (max-width: 900px){
-  .front, .leaders, .players, .footer
+  .top_bar, .front, .leaders, .players, .footer
   {
     grid-template-columns: auto 600px auto;
   }
