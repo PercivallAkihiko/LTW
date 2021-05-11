@@ -185,6 +185,44 @@ input
     transition: all 1s ease-in-out;
 }
 
+.giusto, .sbagliato
+{
+    z-index: 4;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: transparent;
+
+    transition: all 0.5s ease-in-out;
+}
+
+.bottone_giusto, .bottone_sbagliato
+{
+    border: none;
+    cursor: pointer;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 150px;
+    font-weight: bold;
+    color: black;
+    background-color: rgb(0, 185, 146);
+    text-align: center;
+    align-self: center;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition-duration: 0.30s;
+
+}
+
 .alert
 {  
     transform: translate(-50%, -50%);
@@ -201,6 +239,26 @@ input
     display: grid;
     grid-template-rows: repeat(3, auto);
     grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px 5px 5px 5px;
+}
+
+
+.alert_giusto, .alert_sbagliato
+{  
+    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    padding: 10px;
+  
+    display: grid;
+    grid-template-rows: repeat(3, auto);
     grid-column-gap: 5px;
     grid-row-gap: 5px 5px 5px 5px;
 }

@@ -3,25 +3,50 @@ var vite_rimanenti=3;
 var randomnumber=1;
 var primo_round = true;
 var controllo_foto = new Array();
+var giusto_sopra = false;
+var sbagliato_sopra = false;
+
+function risposta_giusta(){
+    $('#giusto').toggleClass('up');
+    avanti_streak++;       
+    document.getElementById('streak').innerHTML=avanti_streak;
+    document.getElementById("streak1").value = avanti_streak;
+    funzione_gioco2();
+}
+
+function risposta_sbagliata(){
+  $('#sbagliato').toggleClass('up');
+  vite_rimanenti--;  
+  document.getElementById('vite_rimaste').innerHTML=vite_rimanenti;
+  funzione_gioco2();
+}
+
 
 function funzione_gioco(){
+  
   if (primo_round == false)
 {
   var valori = document.querySelector('input[name = "quizzolo"]:checked');
   if (document.getElementById(valori.id+"1").innerHTML == myQuestions[randomnumber-1].correctAnswer)
   {
-    alert("giusto");
-    avanti_streak++;       
-    document.getElementById('streak').innerHTML=avanti_streak;
-    document.getElementById("streak1").value = avanti_streak;
+    giusto_sopra = true;
+    $('#giusto').toggleClass('up');
   }
   else
   {
-    vite_rimanenti--;  
-    document.getElementById('vite_rimaste').innerHTML=vite_rimanenti;
-    alert("sbagliato");
+    document.getElementById('risposta_esatta').innerHTML=myQuestions[randomnumber-1].correctAnswer;
+    sbagliato_sopra=true;
+    $('#sbagliato').toggleClass('up');
   } 
 }
+}
+
+
+
+
+function funzione_gioco2(){
+giusto_sopra = false;
+sbagliato_sopra = false;
 if (vite_rimanenti > 0)
 {
   randomnumber = Math.floor(Math.random() * (numero_foto - 1 + 1)) + 1;

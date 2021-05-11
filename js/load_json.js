@@ -30,7 +30,7 @@ function funzione_iniziale(){
         if (myQuestions != undefined)
         { 
           numero_foto=myQuestions.length;
-          funzione_gioco();
+          funzione_gioco2();
         }
     });
     }

@@ -1,5 +1,4 @@
 window.addEventListener('keydown', (event) => {
-    document.getElementById("bottone_invia").focus();
     if (event.key === '1')
     {
         document.getElementById("risultato_a").checked = true;
@@ -16,9 +15,16 @@ window.addEventListener('keydown', (event) => {
     {
         document.getElementById("risultato_d").checked = true;
     }
-
-
-
-
-
+    if (event.key === 'Enter' && giusto_sopra==true)
+    {
+        document.getElementById("bottone_giusto").focus();
+    }
+    else if (event.key === 'Enter' && sbagliato_sopra==true)
+    {
+        document.getElementById("bottone_sbagliato").focus();
+    }
+    else
+    {
+        document.getElementById("bottone_invia").focus();
+    }
 });
