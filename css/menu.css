@@ -10,6 +10,98 @@ body,html
     display: grid;
 }
 
+.page
+{
+    transition: all 1s ease-in-out;
+    z-index: 5;
+}
+
+.top_bar
+{
+    background-color: rgba(0,0,0,.3);
+    display: grid;
+    grid-template-columns: auto 1000px auto;
+    left: 0;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.scrolled
+{
+  background-color: rgb(1, 6, 6);
+}
+
+.top_bar_wrapper
+{
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.logo
+{
+    background-color: transparent;
+    grid-column: 1;
+
+    display: grid;
+    grid-template-columns: 50px auto;
+}
+
+.logo img
+{
+  width: 45px;
+  height: 45px;
+
+  margin-top: auto;
+  margin-bottom: auto;
+  cursor: pointer;
+}
+
+.logo testo_logo{
+  color: white;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-left: 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.menu
+{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    align-content:flex-end;
+    margin-left: auto;
+
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.menu a, .logout
+{
+  float: left;
+  display: block;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+
+  width: 80px;
+  cursor: pointer;
+  transition: color 0.5s ease-in-out;
+}
+
+.menu a:hover
+{
+  color: rgb(0, 185, 146);
+}
+
 .right
 {
     transform: translateX(100%);
@@ -32,36 +124,17 @@ body,html
   display: block;
 }
 
-.menu, .option
-{
-    grid-column: 1/1;
-    grid-row: 1/1;
-
+.option
+{    width: 100%;
     height: 100%;
-    width: 100%;
-    z-index: 2;
-    transition: all 0.5s ease-in-out;
-}
 
-.top
-{
-    position: absolute;    
+    position: absolute;
     top: 0;
     left: 0;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-column-gap: 10px;
 
-    color: white;
-    padding: 10px;
-    font-size: 18px;
+    z-index: 5;
 
-}
-
-.top i
-{
-    margin: auto;
-    cursor: pointer;
+    transition: all 1s ease-in-out;
 }
 
 .option i
@@ -84,19 +157,6 @@ body,html
 .username
 {
     cursor:default;
-}
-
-.logout
-{
-    position: fixed;
-    right: 0;
-    top: 0;
-
-    color: white;
-    padding: 10px;
-    font-size: 18px;
-
-    cursor: pointer;
 }
 
 .play, .option_wrapper
@@ -153,5 +213,44 @@ body,html
     width: 100%;
     text-align: center;
     font-size: 18px;
+}
+
+.top_bar
+  grid-template-columns: auto 1700px auto;
+}
+
+@media screen and (max-width: 1700px){
+  .top_bar
+  {
+    grid-template-columns: auto 1400px auto;
+  }
+}
+
+@media screen and (max-width: 1400px){
+  .top_bar
+  {
+    grid-template-columns: auto 1200px auto;
+  }
+}
+
+@media screen and (max-width: 1250px){
+  .top_bar
+  {
+    grid-template-columns: auto 1100px auto;
+  }
+}
+
+@media screen and (max-width: 1150px){
+  .top_bar
+  {
+    grid-template-columns: auto 900px auto;
+  }
+}
+
+@media screen and (max-width: 950px){
+  .top_bar
+  {
+    grid-template-columns: auto 700px auto;
+  }
 }
 

@@ -17,12 +17,21 @@
         <video autoplay muted loop id="background" class="background">
             <source src="assets/background.mp4" type="video/mp4">
         </video>
-        <div class="menu">
-            <div class="top">
-                <i class="fas fa-cog" id="open_option"></i> 
-                <div class="username" id="username">Username,</div>
-            </div>            
-            <div class="logout" id="logout">Logout</div>
+        <div class="page">
+            <div class="top_bar">
+                <div class="top_bar_wrapper">
+                <div class="logo" onclick="window.location.href = 'index.php';">
+                    <img src="assets/logo.png">
+                    <testo_logo> SPOTME </testo_logo>
+                </div>
+                <div class="menu">
+                    <a href="tutorial.html">TUTORIAL</a>
+                    <a href="ranking.html">RANKING</a>
+                    <a id="open_option">PROFILO</a>
+                    <div class="logout" id="logout">LOGOUT</div>
+                </div>
+                </div>
+            </div>                      
             <div class="play" id="play">
                 PLAY
             </div>

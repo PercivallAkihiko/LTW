@@ -1,3 +1,13 @@
+$(document).ready(function () {
+
+    var username = localStorage.getItem("username");
+    var nationality = localStorage.getItem("nationality")
+
+    if (username !== null){
+        document.getElementById("button").innerHTML = "MENU";
+    }
+ });
+
 window.onload = function () {
 
     var app = new Vue({
@@ -35,7 +45,7 @@ window.onload = function () {
                 this.top -= 50;       
             },
             getLow: function(){
-                if(this.low == 0) return this.low = 3;
+                if(this.low == 0) return this.low + 3;
                 else return this.low;
             },
             getTop: function(){
