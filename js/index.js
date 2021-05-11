@@ -137,7 +137,17 @@ function toggle(){
 
 function ranking(){
    $('html, body').animate({
-      scrollTop: $('#leaders').offset().top
+      scrollTop: $('#leaders').offset().top - 50
   }, 500);
 };
 
+jQuery(window).scroll(function(){
+   var fromTopPx = 50; // distance to trigger
+   var scrolledFromtop = jQuery(window).scrollTop();
+   if(scrolledFromtop > fromTopPx){
+       jQuery('.top_bar').addClass('scrolled');
+       console.log("cane");
+   }else{
+       jQuery('.top_bar').removeClass('scrolled');
+   }
+});
