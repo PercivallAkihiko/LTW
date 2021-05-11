@@ -390,9 +390,12 @@ body,html
   transition-duration: 0.30s;
 }
 
-.btn-login:hover, .btn-tutorial:hover, .btn-sign_up:hover
+.btn-login:hover, .btn-sign_up:hover
 {
-  background-color:rgb(249, 249, 249);
+  background-color: transparent;
+  border: white 2px solid;
+  color: white;
+  width: 170px;
 }
 
 .btn-alert
@@ -404,14 +407,17 @@ body,html
 
 .btn-tutorial
 {
-  margin-left: 0;
   background-color: transparent;
   color: white;
-  border: white solid 2px;
+  border: white 2px solid;
+
+  margin-left: 0;
 }
 
 .btn-tutorial:hover
 {
+  background-color: rgb(0, 185, 146);
+  border: transparent 2px solid;
   color: black;
 }
 

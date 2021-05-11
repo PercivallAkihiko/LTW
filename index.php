@@ -39,7 +39,7 @@
       <div class="wrapper">
           <div class="top_bar">
             <div class="top_bar_wrapper">
-              <div class="logo">
+              <div class="logo" onclick="window.location.href = 'index.php';">
                   <img src="assets/logo.png">
                   <testo_logo> SPOTME </testo_logo>
               </div>
@@ -61,7 +61,7 @@
                     All'utente viene mostrata una foto a 360°, scelta a mano da Google Street View, che ritrae luoghi famosi nelle città come monumenti, attrazioni e location
                     di rilievo. Il giocatore ha a disposizione tre vite e utilizzando la propria padronanza geografica dovrà rispondere attraverso quattro scelte possibili.  
                   </div>
-                  <div class="btn-tutorial">
+                  <div class="btn-tutorial" onclick="window.location.href = 'tutorial.html';">
                     Tutorial
                   </div>
                 </div>

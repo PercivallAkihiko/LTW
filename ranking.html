@@ -17,7 +17,7 @@
       <div class="wrapper">
         <div class="top_bar">
             <div class="top_bar_wrapper">
-                <div class="logo">
+                <div class="logo" onclick="window.location.href = 'index.php';">
                     <img src="assets/logo.png">
                     <testo_logo> SPOTME </testo_logo>
                 </div>
@@ -32,7 +32,7 @@
         <div class="page" id="app">
             <div class="leaders" id="leaders">              
                 <div class="leaders_wrapper">
-                  <h1>Leaderboards</h1>
+                  <h1>Classifica</h1>
                   <div class="leader" v-for="user in users.slice(0, 3)">
                     <div class="top_leader">                            
                       <img v-bind:src="user.nationality" class="user_profile">
@@ -47,21 +47,23 @@
             <div class="players">
                 <div class="players_wrapper">
                     <div class="player">
-                    <div class="title_low title_center">Posizione</div>
-                    <div class="title_low title_center">Profilo</div>
-                    <div class="title_low">Username</div>
-                    <div class="title_low title_center">Highscore</div>
-                    <div class="title_low title_center">Partite totali</div>
+                      <i v-if="low >= 50" class="fas fa-backward title_low" v-on:click="prev()"></i>
+                      <div class="title_low title_center first_title">Posizione</div>
+                      <div class="title_low title_center">Profilo</div>
+                      <div class="title_low">Username</div>
+                      <div class="title_low title_center">Punteggio</div>
+                      <div class="title_low title_center">Partite giocate</div>
+                      <i v-if="top + 50 < lenght" class="fas fa-forward title_low" v-on:click="next()"></i>
                     </div>
                     <div class="line"></div>
-                    <div class="player" v-for="user in users.slice(3, 50)">
-                    <div class="position_low">#{{user.ranking}}</div>
-                    <img class="user_profile_low" v-bind:src="user.nationality"></img>
-                    <div class="username_low">{{user.username}}</div>
-                    <div class="highscore_low">{{user.highscore}}</div>
-                    <div class="total_matches_low">{{user.totale_matches}}</div>
+                    <div class="player" v-for="user in users.slice(getLow(), getTop())">
+                      <div class="position_low">#{{user.ranking}}</div>
+                      <img class="user_profile_low" v-bind:src="user.nationality"></img>
+                      <div class="username_low">{{user.username}}</div>
+                      <div class="highscore_low">{{user.highscore}}</div>
+                      <div class="total_matches_low">{{user.totale_matches}}</div>
                     </div>
-                </div>                              
+                </div>                                   
             </div>
             <div class="footer">
                 <div class="footer_wrapper">

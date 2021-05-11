@@ -5,6 +5,8 @@ body,html
     height: 100%;
     font-family: "Noto Sans KR",sans-serif;
     background-color: black;   
+
+    overflow-x: hidden;
 }
 
 .bold
@@ -228,9 +230,15 @@ body,html
   grid-column: 2;
 }
 
+.first_title
+{
+  grid-column: 2;
+}
+
 .title_low
 {
   font-weight: bold;
+  margin: auto;
 }
 
 .title_center
@@ -245,6 +253,8 @@ body,html
   background-color: rgb(170, 170, 170);
   border-radius: 2px;
   height: 1px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .player
@@ -255,7 +265,24 @@ body,html
   padding: 5px 10px 5px 10px;
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 3fr 3fr;
+  grid-template-columns: 20px 1fr 1fr 1fr 3fr 3fr 20px;
+}
+
+.control
+{
+  display: grid;
+  grid-template-columns: 20px auto 20px;
+}
+
+.fa-backward, .fa-forward
+{
+  cursor: pointer;
+  transition: all 0.5 ease-in-out;
+}
+
+.fa-backward:hover, .fa-forward:hover
+{
+  color: rgb(0, 185, 146);
 }
 
 .position_low, .user_profile_low, .username_low, .highscore_low, .total_matches_low
@@ -267,6 +294,11 @@ body,html
 .position_low, .highscore_low, .total_matches_low
 {
   text-align: center;
+}
+
+.position_low
+{
+  grid-column: 2;
 }
 
 .user_profile_low
@@ -349,6 +381,6 @@ body,html
   }
   .player
   {
-    grid-template-columns: 1fr 1fr 2fr 2fr 2fr;
+    grid-template-columns: 16px 1fr 1fr 2fr 2fr 2fr 16px;
   }
 }
