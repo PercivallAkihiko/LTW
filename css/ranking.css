@@ -310,7 +310,7 @@ body,html
 
 .top_bar, .leaders, .players, .footer
 {
-  grid-template-columns: auto 1200px auto;
+  grid-template-columns: auto 1700px auto;
 }
 
 @media screen and (max-width: 1700px){
