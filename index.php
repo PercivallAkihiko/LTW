@@ -45,7 +45,7 @@
               </div>
               <div class="menu">
                   <a href="tutorial.html">TUTORIAL</a>
-                  <a onClick="ranking()">RANKING</a>
+                  <a href="ranking.html">RANKING</a>
                   <a class="switchButton">SIGN UP</a>
                   <a class="switchButton moveUp">LOGIN</a>
               </div>
@@ -136,60 +136,6 @@
                       <i class="fab fa-instagram"></i>
                     </iconwrapper>
                   </form>
-                </div>
-              </div>
-            </div>
-            <div id="app">
-            <div class="leaders cane" id="leaders">              
-              <div class="leaders_wrapper">
-                <h1>Leaderboards</h1>
-                <div class="leader" v-for="user in users.slice(0, 3)">
-                  <div class="top_leader">                            
-                    <img v-bind:src="user.nationality" class="user_profile">
-                    <img v-bind:src="user.medal" class="user_medal">
-                  </div>
-                  <div class="username">{{user.username}}</div>
-                  <div class="score">Highscore: {{user.highscore}}</div>
-                  <div class="low_bar">{{user.totale_matches}}</div>
-                </div>
-              </div>
-            </div>
-            <div class="players cane">
-              <div class="players_wrapper">
-                <div class="player">
-                  <div class="title_low">Posizione</div>
-                  <div class="title_low title_center">Profilo</div>
-                  <div class="title_low">Username</div>
-                  <div class="title_low title_center">Highscore</div>
-                  <div class="title_low title_center">Partite totali</div>
-                </div>
-                <div class="line"></div>
-                <div class="player" v-for="user in users.slice(3, 50)">
-                  <div class="position_low">#{{user.ranking}}</div>
-                  <img class="user_profile_low" v-bind:src="user.nationality"></img>
-                  <div class="username_low">{{user.username}}</div>
-                  <div class="highscore_low">{{user.highscore}}</div>
-                  <div class="total_matches_low">{{user.totale_matches}}</div>
-                </div>
-              </div>                              
-            </div>
-            </div>          
-            <div class="footer">
-              <div class="footer_wrapper">
-                <div class="col1">
-                  Michele si inventi qualcosa per il footer...
-                  Michele si inventi qualcosa per il footer...
-                  Michele si inventi qualcosa per il footer...                  
-                </div>
-                <div class="col2">
-                  Michele si inventi qualcosa per il footer...
-                  Michele si inventi qualcosa per il footer...
-                  Michele si inventi qualcosa per il footer...                  
-                </div>
-                <div class="col3">
-                  Michele si inventi qualcosa per il footer...
-                  Michele si inventi qualcosa per il footer...
-                  Michele si inventi qualcosa per il footer...                  
                 </div>
               </div>
             </div>

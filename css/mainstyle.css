@@ -501,178 +501,6 @@ select:focus
   transition: all 0.8s ease-in-out;
 }
 
-.leaders
-{
-  grid-column: 1/-1;
-  display: grid;
-  grid-template-columns: auto 1000px auto;  
-
-  padding-top: 15px;
-  padding-bottom: 15px;
-
-  background-color: rgb(1, 6, 6);
-}
-
-
-.leaders_wrapper
-{ 
-  grid-column: 2;
-
-  width: 100%;   
-  padding: auto;
-
-  display: grid;
-  grid-template-rows: auto auto;
-  grid-row-gap: 15px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 15px;
-
-  padding-top: 0px;
-  padding-bottom: 20px;
-}
-
-.leaders h1
-{
-  margin-top: 0;
-  margin-bottom: 0;
-  grid-column: 1/-1;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-  flex-direction: column;
-}
-
-.leader
-{
-    background-color: rgb(249, 249, 249);
-    color: black;
-    text-align: center;
-    border-radius: 5px;
-
-    display: grid;
-    grid-template-rows: auto auto auto auto;
-    grid-row-gap: 10px;
-    padding: 10px;
-}
-
-.top_leader
-{
-  display: grid;
-  grid-template-columns: auto 140px auto;
-}
-
-.user_profile, .user_medal
-{
-  height: 140px;
-  width: 140px;
-
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.user_medal
-{
-  height: 50px;
-  width: 40px;
-  right: 0;
-  bottom: 0;
-  margin-left: auto;
-  margin-top: auto;
-}
-
-.username
-{
-  font-size: 20px;
-  font-weight: bold;
-  margin: auto;
-}
-
-.score
-{
-  background-color: rgb(0, 185, 146);
-  padding: 5px 10px 5px 10px;
-  border-radius: 10px;
-  margin: auto;
-  font-weight: bold;
-}
-
-.players
-{
-  display: grid;
-  grid-template-columns: auto 1000px auto;
-
-  padding-top: 15px;
-  padding-bottom: 15px;
-
-  background-color: rgb(249, 249, 249);
-  color: black;
-}
-
-.players_wrapper
-{
-  grid-column: 2;
-}
-
-.title_low
-{
-  font-weight: bold;
-}
-
-.title_center
-{
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.line
-{
-  width: 100%;
-  background-color: rgb(170, 170, 170);
-  border-radius: 2px;
-  height: 1px;
-}
-
-.player
-{
-  height: 35px;
-  border-radius: 5px;
-
-  padding: 5px 10px 5px 10px;
-
-  display: grid;
-  grid-template-columns: 75px 130px 1fr 1fr 1fr;
-}
-
-.position_low, .user_profile_low, .username_low, .highscore_low, .total_matches_low
-{
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.position_low, .highscore_low, .total_matches_low
-{
-  text-align: center;
-}
-
-.user_profile_low
-{
-  height: 30px;
-  width: 30px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.highscore_low
-{
-  background-color: rgb(0, 185, 146);
-  font-weight: bold;
-  width: 100px;
-  padding: 5px 10px 5px 10px;
-  border-radius: 15px;
-  margin: auto;
-}
-
 .footer
 {
   height: 147px;
@@ -690,6 +518,18 @@ select:focus
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.top_bar, .front, .leaders, .players, .footer
+{
+  grid-template-columns: auto 1200px auto;
+}
+
+@media screen and (max-width: 1360px){
+  .top_bar, .front, .leaders, .players, .footer
+  {
+    grid-template-columns: auto 1000px auto;
+  }
 }
 
 @media screen and (max-width: 1100px){

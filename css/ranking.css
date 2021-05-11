@@ -12,44 +12,23 @@ body,html
   font-weight: bold;
 }
 
-.wrapper
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  inset: 0px;
-  display: grid;
-  grid-template-rows: 50px auto;
-  grid-template-columns: auto 1000px auto;
-  background-color: transparent;
-  background-size: cover;
-
-  z-index: 5;
-}
-
-
 .top_bar
 {
-    grid-column: 1/-1;
-    background-color: transparent;
-    display: grid;
-    grid-template-columns: auto 1000px auto;
-
+  display: grid;
+  grid-template-columns: auto 1200px auto;
 }
 
 .top_bar_wrapper
 {
-  grid-column: 2;  
+  grid-column: 2;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
 }
 
 .logo
 {
     background-color: transparent;
-    grid-column: 1/1;
+    grid-column: 1;
 
     display: grid;
     grid-template-columns: 50px auto;
@@ -77,7 +56,6 @@ body,html
 
 .menu
 {
-    grid-column: 3/3;
     list-style: none;
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -108,53 +86,77 @@ body,html
   color: rgb(0, 185, 146);
 }
 
-.switchButton
+.wrapper
 {
-  grid-column: 3/3;
-  grid-row: 1/1;
-
-  transition: all 0.5s ease-in-out;
-}
-
-.page
-{
-    grid-column: 1/-1;
-    display: grid;
-    grid-template-rows: 270px auto;
-    grid-template-columns: auto 1000px auto;
-}
-
-.leaders_back
-{
-  grid-column: 1/-1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  inset: 0px;
   display: grid;
-  grid-template-columns: auto 1000px auto;
+  grid-template-rows: 50px auto;
+  background-color: transparent;
+  background-size: cover;
+
+  z-index: 5;
 }
 
 .leaders
 {
-  margin-top: 20px;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: auto 1200px auto;  
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  background-color: rgb(1, 6, 6);
+}
+
+
+.leaders_wrapper
+{ 
   grid-column: 2;
 
-  background-color: black;
-  width: 100%;    
-  margin-top: 5px;
+  width: 100%;   
   padding: auto;
 
   display: grid;
+  grid-template-rows: auto auto;
+  grid-row-gap: 15px;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 10px;
+  grid-column-gap: 15px;
+
+  padding-top: 0px;
+  padding-bottom: 20px;
+}
+
+.leaders h1
+{
+  margin-top: 0;
+  margin-bottom: 0;
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  flex-direction: column;
+
+  color: white;
 }
 
 .leader
 {
-    background-color: white;
+    background-color: rgb(249, 249, 249);
+    color: black;
     text-align: center;
     border-radius: 5px;
 
     display: grid;
     grid-template-rows: auto auto auto auto;
-    padding: 5px;
+    grid-row-gap: 10px;
+    padding: 10px;
 }
 
 .top_leader
@@ -195,52 +197,54 @@ body,html
   padding: 5px 10px 5px 10px;
   border-radius: 10px;
   margin: auto;
-}
-
-.players_back
-{
-  grid-column: 1/-1;
-  display: grid;
-  grid-template-columns: auto 1000px auto;
-}
-
-.title_low
-{
-  margin-top: auto;
-  margin-bottom: auto;
-
   font-weight: bold;
-}
-
-.title_highscore, .title_matches
-{
-  margin: auto;
 }
 
 .players
 {
-  grid-column: 2;
-  margin-top: 15px;
-  background-color: transparent;
-  color: black;
-  width: 100%;
-  height: 100%;
+  display: grid;
+  grid-template-columns: auto 1200px auto;
 
-  display: grid;  
-  grid-template-rows: auto;
-  grid-row-gap: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  background-color: rgb(249, 249, 249);
+  color: black;
+}
+
+.players_wrapper
+{
+  grid-column: 2;
+}
+
+.title_low
+{
+  font-weight: bold;
+}
+
+.title_center
+{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.line
+{
+  width: 100%;
+  background-color: rgb(170, 170, 170);
+  border-radius: 2px;
+  height: 1px;
 }
 
 .player
 {
-  background-color: white;
   height: 35px;
   border-radius: 5px;
 
   padding: 5px 10px 5px 10px;
 
   display: grid;
-  grid-template-columns: 75px 130px 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 3fr 3fr;
 }
 
 .position_low, .user_profile_low, .username_low, .highscore_low, .total_matches_low
@@ -256,8 +260,8 @@ body,html
 
 .user_profile_low
 {
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 30px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -270,4 +274,51 @@ body,html
   padding: 5px 10px 5px 10px;
   border-radius: 15px;
   margin: auto;
+}
+
+.footer
+{
+  height: 147px;
+  width: 100%;
+  background-color: rgb(16, 21, 34);
+
+  color: white;
+
+  display: grid;
+  grid-template-columns: auto 1200px auto;
+}
+
+.footer_wrapper
+{
+  padding: 10px;
+  grid-column: 2;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.top_bar, .leaders, .players, .footer
+{
+  grid-template-columns: auto 1200px auto;
+}
+
+@media screen and (max-width: 1360px){
+  .top_bar, .leaders, .players, .footer
+  {
+    grid-template-columns: auto 1000px auto;
+  }
+}
+
+@media screen and (max-width: 1100px){
+  .top_bar, .leaders, .players, .footer
+  {
+    grid-template-columns: auto 750px auto;
+  }
+}
+
+@media screen and (max-width: 900px){
+  .top_bar, .leaders, .players, .footer
+  {
+    grid-template-columns: auto 600px auto;
+  }
 }
