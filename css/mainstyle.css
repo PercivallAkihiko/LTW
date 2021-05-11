@@ -141,8 +141,6 @@ body,html
 .top_bar
 {
     background-color: rgba(0,0,0,.3);
-    display: grid;
-    grid-template-columns: auto 1000px auto;
     left: 0;
 
     position: fixed;
@@ -156,7 +154,6 @@ body,html
 
 .top_bar_wrapper
 {
-  grid-column: 2;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -520,27 +517,27 @@ select:focus
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.top_bar, .front, .leaders, .players, .footer
+.front, .leaders, .players, .footer
 {
   grid-template-columns: auto 1200px auto;
 }
 
 @media screen and (max-width: 1360px){
-  .top_bar, .front, .leaders, .players, .footer
+  .front, .leaders, .players, .footer
   {
     grid-template-columns: auto 1000px auto;
   }
 }
 
 @media screen and (max-width: 1100px){
-  .top_bar, .front, .leaders, .players, .footer
+  .front, .leaders, .players, .footer
   {
     grid-template-columns: auto 750px auto;
   }
 }
 
 @media screen and (max-width: 900px){
-  .top_bar, .front, .leaders, .players, .footer
+  .front, .leaders, .players, .footer
   {
     grid-template-columns: auto 600px auto;
   }
