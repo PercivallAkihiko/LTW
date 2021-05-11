@@ -522,7 +522,7 @@ select:focus
 
 .top_bar, .front, .leaders, .players, .footer
 {
-  grid-template-columns: auto 1200px auto;
+  grid-template-columns: auto 1500px auto;
 }
 
 @media screen and (max-width: 1360px){
