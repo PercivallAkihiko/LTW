@@ -140,3 +140,4 @@ function ranking(){
       scrollTop: $('#leaders').offset().top
   }, 500);
 };
+

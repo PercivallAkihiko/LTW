@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>  
+  <script type="text/javascript" src="/js/vue.js"></script>
+  <script src="/js/index.js"></script>
+  <script src="/js/ranking.js"></script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&amp;display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/63209a46b9.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" href="css/mainstyle.css">
-  <script type="text/javascript" src="/js/vue.js"></script>
-  <script type="text/javascript" src="/js/ranking.js"></script>
-  <title>SpotMe</title>
-  <script src="/js/index.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/mainstyle.css">    
+  <title>SpotMe</title>  
 
 </head>
   <body>
@@ -51,15 +51,15 @@
               </div>
             </div>
           </div>
-          <div class="page" id="app">
+          <div class="page">
             <div class="front">
               <div class="front_wrapper">
                 <div class="text-area">
                   <h1>SPOTME</h1>
                   <line></line>
-                  <div class="ciao">Spotme è un gioco per Browser di scoperta geografica che richiede ai giocatori di indovinare la posizione nel mondo usando sono gli indizi visibili.
-                    All'utente viene mostrata una foto a 360° scelta a mano da Google Street View che ritrae luoghi famosi nelle città come monumenti, attrazioni e location
-                    di rilievo. Il giocatore ha a disposizione tre vite e utilizzando la propria padronanza geografica deve rispondere attraverso quattro scelte disponibili.  
+                  <div class="ciao">Spotme è un gioco per Browser di scoperta geografica che richiede ai giocatori di indovinare la posizione nel mondo usando gli indizi visibili.
+                    All'utente viene mostrata una foto a 360°, scelta a mano da Google Street View, che ritrae luoghi famosi nelle città come monumenti, attrazioni e location
+                    di rilievo. Il giocatore ha a disposizione tre vite e utilizzando la propria padronanza geografica dovrà rispondere attraverso quattro scelte possibili.  
                   </div>
                   <div class="btn-tutorial">
                     Tutorial
@@ -138,8 +138,9 @@
                   </form>
                 </div>
               </div>
-            </div>          
-            <div class="leaders" id="leaders">              
+            </div>
+            <div id="app">
+            <div class="leaders cane" id="leaders">              
               <div class="leaders_wrapper">
                 <h1>Leaderboards</h1>
                 <div class="leader" v-for="user in users.slice(0, 3)">
@@ -148,12 +149,12 @@
                     <img v-bind:src="user.medal" class="user_medal">
                   </div>
                   <div class="username">{{user.username}}</div>
-                  <div class="score bold">Highscore: {{user.highscore}}</div>
+                  <div class="score">Highscore: {{user.highscore}}</div>
                   <div class="low_bar">{{user.totale_matches}}</div>
                 </div>
               </div>
             </div>
-            <div class="players">
+            <div class="players cane">
               <div class="players_wrapper">
                 <div class="player">
                   <div class="title_low">Posizione</div>
@@ -172,6 +173,7 @@
                 </div>
               </div>                              
             </div>
+            </div>          
             <div class="footer">
               <div class="footer_wrapper">
                 <div class="col1">Michele si inventi qualcosa per il footer...</div>
