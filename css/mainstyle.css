@@ -141,6 +141,8 @@ body,html
 .top_bar
 {
     background-color: rgba(0,0,0,.3);
+    display: grid;
+    grid-template-columns: auto 1000px auto;
     left: 0;
 
     position: fixed;
