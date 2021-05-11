@@ -34,6 +34,25 @@
           </form>            
         </div>
 
+        <div class="giusto up" id="giusto">
+          <div class="alert_giusto">
+            <div class="alertTitle">GIUSTO!</div>
+            <div class="alertText">Ma andiamo avanti</div>
+            <button type="button" id="bottone_giusto" onclick="risposta_giusta()" class="bottone_giusto" >Continua</button>        
+          </div>           
+        </div>
+
+        <div class="sbagliato up" id="sbagliato">
+          <div class="alert_sbagliato">
+            <div class="alertTitle">SBAGLIATO!</div>
+            <div class="alertText">La risposta giusta era:</div>
+            <div class="alertText" id="risposta_esatta">empty</div>
+            <button type="button" id="bottone_sbagliato" onclick="risposta_sbagliata()" class="bottone_sbagliato" >Continua</button>        
+          </div>           
+        </div>
+
+
+
         <div class="vite_bar">          
           <div id=vite_rimaste class="vite_testo">3</div>
           <i class="fas fa-heart"></i>
