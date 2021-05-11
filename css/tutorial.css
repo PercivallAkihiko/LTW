@@ -14,6 +14,8 @@ body,html
   height: 100%;
   width: 100%;
   inset: 0px;
+  display: grid;
+  grid-template-rows: 50px auto;
   background-color: trasparent;
   background-size: cover;
 
@@ -22,35 +24,18 @@ body,html
 
 .top_bar
 {
-    background-color: rgba(0,0,0,.3);
-    display: grid;
-    grid-template-columns: auto 1000px auto;
-    left: 0;
-
     background-color: rgb(1, 6, 6);
+    display: grid;
+    grid-template-columns: repeat(3, auto);
 
-    position: fixed;
-    width: 100vw;
-
-    z-index: 5;
-}
-
-.scrolled
-{
-  background-color: rgb(1, 6, 6);
-}
-
-.top_bar_wrapper
-{
-  grid-column: 2;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .logo
 {
     background-color: transparent;
-    grid-column: 1;
+    grid-column: 1/1;
 
     display: grid;
     grid-template-columns: 50px auto;
@@ -60,24 +45,24 @@ body,html
 {
   width: 45px;
   height: 45px;
-
-  margin-top: auto;
-  margin-bottom: auto;
+  padding-top: 2px;
   cursor: pointer;
 }
 
 .logo testo_logo{
-  color: white;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-right: auto;
-  margin-left: 0;
-  font-size: 20px;
-  cursor: pointer;
-}
+    color:  white;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    padding-bottom: 4px;
+    margin-left: 0;
+    font-size: 20px;
+    cursor: pointer;
+  }
 
 .menu
 {
+    grid-column: 3/3;
     list-style: none;
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -100,7 +85,7 @@ body,html
 
   width: 80px;
   cursor: pointer;
-  transition: color 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .menu a:hover
@@ -108,20 +93,11 @@ body,html
   color: rgb(0, 185, 146);
 }
 
-.switchButton
-{
-  grid-column: 3/3;
-  grid-row: 1/1;
-
-  transition: all 0.5s ease-in-out;
-}
-
 .data
 {
   width: 100%;
   height: 100%;
   display: grid;
-  margin-top: 50px;
   grid-template-rows: 650px 650px 650px 650px 650px;
 }
 
@@ -240,90 +216,4 @@ body,html
   font-size: 15px;
   font-weight: bold;
   color: rgb(0, 185, 146);
-}
-
-.footer
-{
-  height: 147px;
-  width: 100%;
-  background-color: rgb(16, 21, 34);
-
-  color: white;
-
-  display: grid;
-  grid-template-columns: auto 1200px auto;
-}
-
-.footer_wrapper
-{
-  padding: 10px;
-  grid-column: 2;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.top_bar, .footer
-{
-  grid-template-columns: auto 1700px auto;
-}
-
-.page_dentro
-{
-  grid-template-columns: auto 825px 825px auto;
-}
-
-@media screen and (max-width: 1700px){
-  .top_bar, .footer
-  {
-    grid-template-columns: auto 1400px auto;
-  }
-  .page_dentro
-  {
-    grid-template-columns: auto 675px 675px auto;
-  }
-}
-
-@media screen and (max-width: 1400px){
-  .top_bar, .footer
-  {
-    grid-template-columns: auto 1200px auto;
-  }
-  .page_dentro
-  {
-    grid-template-columns: auto 575px 575px auto;
-  }
-}
-
-@media screen and (max-width: 1250px){
-  .top_bar, .footer
-  {
-    grid-template-columns: auto 1100px auto;
-  }
-  .page_dentro
-  {
-    grid-template-columns: auto 525px 525px auto;
-  }
-}
-
-@media screen and (max-width: 1150px){
-  .top_bar, .footer
-  {
-    grid-template-columns: auto 900px auto;
-  }
-  .page_dentro
-  {
-    grid-template-columns: auto 425px 425px auto;
-  }
-}
-
-@media screen and (max-width: 950px){
-  .top_bar, .footer
-  {
-    grid-template-columns: auto 700px auto;
-  }
-  .page_dentro
-  {
-    grid-template-columns: auto 325px 325px auto;
-  }
 }
