@@ -214,7 +214,7 @@ body,html
 
   width: 80px;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
 }
 
 .menu a:hover
@@ -519,7 +519,7 @@ select:focus
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.top_bar, .front, .leaders, .players, .footer
+.top_bar, .front, .footer
 {
   grid-template-columns: auto 1700px auto;
 }
@@ -530,7 +530,7 @@ select:focus
 }
 
 @media screen and (max-width: 1700px){
-  .top_bar, .front, .leaders, .players, .footer
+  .top_bar, .front, .footer
   {
     grid-template-columns: auto 1400px auto;
   }
@@ -542,7 +542,7 @@ select:focus
 }
 
 @media screen and (max-width: 1400px){
-  .top_bar, .front, .leaders, .players, .footer
+  .top_bar, .front, .footer
   {
     grid-template-columns: auto 1200px auto;
   }
@@ -553,7 +553,7 @@ select:focus
 }
 
 @media screen and (max-width: 1250px){
-  .top_bar, .front, .leaders, .players, .footer
+  .top_bar, .front, .footer
   {
     grid-template-columns: auto 1100px auto;
   }
@@ -563,19 +563,19 @@ select:focus
   }
 }
 
-@media screen and (max-width: 1100px){
-  .top_bar, .front, .leaders, .players, .footer
+@media screen and (max-width: 1150px){
+  .top_bar, .front, .footer
   {
     grid-template-columns: auto 900px auto;
   }
   .front_wrapper
   {
-    grid-template-columns: 450px auto 250px;
+    grid-template-columns: 500px auto 250px;
   }
 }
 
-@media screen and (max-width: 900px){
-  .top_bar, .front, .leaders, .players, .footer
+@media screen and (max-width: 950px){
+  .top_bar, .front, .footer
   {
     grid-template-columns: auto 700px auto;
   }
