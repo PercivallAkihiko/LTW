@@ -74,7 +74,10 @@ if (vite_rimanenti > 0)
   {
     if (alphabet.charAt(i) != emptyString)
     {
-      randomnumber2 = Math.floor(Math.random() * (39445 - 1 + 1)) + 1;
+      do
+      {
+      randomnumber2 = Math.floor(Math.random() * ((data2.country.length-1) - 1 + 1)) + 1;
+      }while(data2.country[randomnumber2] == myQuestions[randomnumber-1].correctAnswer);
       document.getElementById("risultato_"+alphabet.charAt(i)+"1").innerHTML= data2.country[randomnumber2];
     }
   }
