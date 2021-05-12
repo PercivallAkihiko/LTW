@@ -25,7 +25,7 @@ function risposta_sbagliata(){
 
 function funzione_gioco(){
   
-  if (primo_round == false)
+  if (primo_round == false && vite_rimanenti>0)
 {
   var valori = document.querySelector('input[name = "quizzolo"]:checked');
   if (document.getElementById(valori.id+"1").innerHTML == myQuestions[randomnumber-1].correctAnswer)
