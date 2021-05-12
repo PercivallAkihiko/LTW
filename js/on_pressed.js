@@ -17,11 +17,13 @@ window.addEventListener('keydown', (event) => {
     }
     if (event.key === 'Enter' && giusto_sopra==true)
     {
-        document.getElementById("bottone_giusto").focus();
+        document.getElementById("fakeAnchor").focus();
+        risposta_giusta();
     }
     else if (event.key === 'Enter' && sbagliato_sopra==true)
     {
-        document.getElementById("bottone_sbagliato").focus();
+        document.getElementById("fakeAnchor").focus();
+        risposta_sbagliata();
     }
     else
     {
