@@ -201,10 +201,11 @@ body,html
 .option_wrapper
 {
     display: grid;
-    grid-template-rows: repeat(3, auto);    
+    grid-template-rows: repeat(3, auto);  
+    grid-row-gap: 7px;  
     grid-template-columns: 130px 1fr 1fr; 
 
-    width: 340px;
+    width: 400px;
 
     background-color: rgb(0, 0, 0, 0.7);
     border-radius: 7px;
