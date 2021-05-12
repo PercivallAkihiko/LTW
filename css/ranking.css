@@ -343,6 +343,38 @@ body,html
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+.col
+{
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.footer_title
+{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+iconwrapper
+{
+  text-align: center;
+  margin: auto;  
+  padding: 20px;
+}
+
+iconwrapper i
+{
+  padding-left: 15px;
+  padding-right: 15px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
 .top_bar, .leaders, .players, .footer
 {
   grid-template-columns: auto 1700px auto;
