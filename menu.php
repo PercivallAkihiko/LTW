@@ -11,6 +11,7 @@
         <link rel="stylesheet" type="text/css" href="css/menu.css">
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/vue.js"></script>
         <script src="/js/menu.js"></script>
 
         <!--
@@ -54,8 +55,13 @@
         <div class="option left">
             <i class="fas fa-chevron-left" id="close_option"></i>
             <div class="option_wrapper">
-                <img src="assets/flags/italia.png" id="user_profile">
-                <div class="user_div" id="user_div">USERNAME</div>
+                <img src="" id="user_profile">
+                <div class="option_key">Username:</div>
+                <div class="option_value" id="user_div">Percivall</div>
+                <div class="option_key">Punteggio:</div>
+                <div class="option_value" id="score_div">999</div>
+                <div class="option_key">Giocate:</div>
+                <div class="option_value" id="played_div">70</div>
             </div>
         </div>
     </body>

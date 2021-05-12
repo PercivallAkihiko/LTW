@@ -37,8 +37,7 @@ $(document).ready(function () {
         console.log(data);
         if(data.success){
           console.log("login successful");
-          localStorage.setItem("username", data.user.username);
-          localStorage.setItem("nationality", data.user.nationality);      
+          localStorage.setItem("username", data.user.username);     
           window.location.href = "menu.php";
         }
         else{
@@ -135,18 +134,18 @@ $(document).ready(function () {
    mounted: function () {
        var self = this;
        $.ajax({
-           url: '../php/load_nazioni.php',
-           method: 'POST',
+           url: '../php/load_nazioni.php?username=' + username,
+           method: 'GET',
            success: function (data) {
                self.nazioni = JSON.parse(data);
            },
-           error: function (error) {
-               console.log(error);
+           error: function (data) {
+               console.log(data);
            }
        });
    }
    
-});
+   });
 
 
 });

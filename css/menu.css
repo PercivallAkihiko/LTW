@@ -143,9 +143,11 @@ body,html
 {
     position: absolute;  
     right: 0;
+    top: 50%;
+    transform: translateY(-50%);
     color: white;
     padding: 10px;
-    font-size: 18px;
+    font-size: 30px;
     margin: auto;
     cursor: pointer;    
 }
@@ -200,24 +202,28 @@ body,html
 {
     display: grid;
     grid-template-rows: repeat(3, auto);    
-    grid-row-gap: 10px;
+    grid-template-columns: 130px 1fr 1fr; 
+
+    width: 340px;
+
+    background-color: rgb(0, 0, 0, 0.7);
+    border-radius: 7px;
+    border: 0.5px grey solid;
+    padding: 10px;
 }
 
 .option_wrapper img
 {
     margin: auto;
-    height: 150px;
-    width: 150px;
-}
+    height: 100px;
+    width: 100px;
 
-.user_div
-{
-    width: 100%;
-    text-align: center;
-    font-size: 18px;
+    grid-column: 1;
+    grid-row: 1/-1;
 }
 
 .top_bar
+{
   grid-template-columns: auto 1700px auto;
 }
 

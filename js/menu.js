@@ -6,11 +6,6 @@ $(document).ready(function () {
     if (username === null){
         window.location.href = "index.php";
     }
-    else{
-        console.log(username);
-        document.getElementById("user_div").innerHTML = username;
-        document.getElementById("user_profile").setAttribute("src", nationality);
-    }
 
     document.getElementById("open_option").onclick = function() {
         option_toggle();
@@ -29,6 +24,21 @@ $(document).ready(function () {
     document.getElementById("play").onclick = function() {
         window.location.href = "game.html";
     };  
+
+    $.ajax ( {
+        url: '../php/load_user_info.php',
+        dataType: "json",
+        data: jQuery.param({ username: username }),
+        success: function (data) {
+            document.getElementById("user_div").innerHTML = data.username;
+            document.getElementById("score_div").innerHTML = data.highscore;
+            document.getElementById("played_div").innerHTML = data.total_matches;
+            document.getElementById("user_profile").setAttribute("src", data.nationality);
+        },
+        error: function (error) {
+            console.log("non va");
+        }
+    } );
  
  });
 
