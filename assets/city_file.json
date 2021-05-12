@@ -199,6 +199,226 @@
       {
          "correctAnswer":"Grenoble, France",
          "file":"assets/game/50.jpg"
+      },
+      {
+         "correctAnswer":"Groningen, Germany",
+         "file":"assets/game/51.jpg"
+      },
+      {
+         "correctAnswer":"Salamanca, Spain",
+         "file":"assets/game/52.jpg"
+      },
+      {
+         "correctAnswer":"Dublin, Ireland",
+         "file":"assets/game/53.jpg"
+      },
+      {
+         "correctAnswer":"Nantes, France",
+         "file":"assets/game/54.jpg"
+      },
+      {
+         "correctAnswer":"Visby, Sweden",
+         "file":"assets/game/55.jpg"
+      },
+      {
+         "correctAnswer":"Amman, Jordan",
+         "file":"assets/game/56.jpg"
+      },
+      {
+         "correctAnswer":"Kuta, Indonesia",
+         "file":"assets/game/57.jpg"
+      },
+      {
+         "correctAnswer":"Sydney, Australia",
+         "file":"assets/game/58.jpg"
+      },
+      {
+         "correctAnswer":"Manila, Philippines",
+         "file":"assets/game/59.jpg"
+      },
+      {
+         "correctAnswer":"Itsukushima, Japan",
+         "file":"assets/game/60.jpg"
+      },
+      {
+         "correctAnswer":"Prague, Czech Republic",
+         "file":"assets/game/61.jpg"
+      },
+      {
+         "correctAnswer":"Delft, Netherlands",
+         "file":"assets/game/62.jpg"
+      },
+      {
+         "correctAnswer":"Rome, Italy",
+         "file":"assets/game/63.jpg"
+      },
+      {
+         "correctAnswer":"Shibuya, Japan",
+         "file":"assets/game/64.jpg"
+      },
+      {
+         "correctAnswer":"Dubrovnik, Croatia",
+         "file":"assets/game/65.jpg"
+      },
+      {
+         "correctAnswer":"Versailles, France",
+         "file":"assets/game/66.jpg"
+      },
+      {
+         "correctAnswer":"St Michael, United Kingdom",
+         "file":"assets/game/67.jpg"
+      },
+      {
+         "correctAnswer":"Mnemba, Tanzania",
+         "file":"assets/game/68.jpg"
+      },
+      {
+         "correctAnswer":"Amboise, France",
+         "file":"assets/game/70.jpg"
+      },
+      {
+         "correctAnswer":"Arequipa, Peru",
+         "file":"assets/game/71.jpg"
+      },
+      {
+         "correctAnswer":"Venice, Italy",
+         "file":"assets/game/72.jpg"
+      },
+      {
+         "correctAnswer":"Amsterdam, Netherlands",
+         "file":"assets/game/73.jpg"
+      },
+      {
+         "correctAnswer":"Zagabria, Croatia",
+         "file":"assets/game/74.jpg"
+      },
+      {
+         "correctAnswer":"Mandra, Italy",
+         "file":"assets/game/75.jpg"
+      },
+      {
+         "correctAnswer":"Warsaw, Poland",
+         "file":"assets/game/76.jpg"
+      },
+      {
+         "correctAnswer":"Milan, Italy",
+         "file":"assets/game/77.jpg"
+      },
+      {
+         "correctAnswer":"Babel, Canada",
+         "file":"assets/game/78.jpg"
+      },
+      {
+         "correctAnswer":"Canea-Suda, Greece",
+         "file":"assets/game/79.jpg"
+      },
+      {
+         "correctAnswer":"Hobas, Namibia",
+         "file":"assets/game/80.jpg"
+      },
+      {
+         "correctAnswer":"Paris, France",
+         "file":"assets/game/81.jpg"
+      },
+      {
+         "correctAnswer":"Capri, Italy",
+         "file":"assets/game/82.jpg"
+      },
+      {
+         "correctAnswer":"Alcamo, Italy",
+         "file":"assets/game/83.jpg"
+      },
+      {
+         "correctAnswer":"Abancay, Peru",
+         "file":"assets/game/84.jpg"
+      },
+      {
+         "correctAnswer":"Hamburg, Germany",
+         "file":"assets/game/85.jpg"
+      },
+      {
+         "correctAnswer":"Sedona, United States",
+         "file":"assets/game/86.jpg"
+      },
+      {
+         "correctAnswer":"Alassio, Italy",
+         "file":"assets/game/87.jpg"
+      },
+      {
+         "correctAnswer":"Ho Chi Minh, Vietnam",
+         "file":"assets/game/88.jpg"
+      },
+      {
+         "correctAnswer":"Lake Louise, Canada",
+         "file":"assets/game/89.jpg"
+      },
+      {
+         "correctAnswer":"Metsoke Dragot, Israel",
+         "file":"assets/game/90.jpg"
+      },
+      {
+         "correctAnswer":"Rome, Italy",
+         "file":"assets/game/91.jpg"
+      },
+      {
+         "correctAnswer":"Shangai, China",
+         "file":"assets/game/92.jpg"
+      },
+      {
+         "correctAnswer":"Shabanovskoye, Russia",
+         "file":"assets/game/93.jpg"
+      },
+      {
+         "correctAnswer":"Jarabacoa, Dominican Republic",
+         "file":"assets/game/94.jpg"
+      },
+      {
+         "correctAnswer":"Lake Louise, Canada",
+         "file":"assets/game/95.jpg"
+      },
+      {
+         "correctAnswer":"Kiimaselkä, Finland",
+         "file":"assets/game/96.jpg"
+      },
+      {
+         "correctAnswer":"Kabul, Afghanistan",
+         "file":"assets/game/97.jpg"
+      },
+      {
+         "correctAnswer":"Xingwen County, China",
+         "file":"assets/game/98.jpg"
+      },
+      {
+         "correctAnswer":"Badami, India",
+         "file":"assets/game/99.jpg"
+      },
+      {
+         "correctAnswer":"Dahab, Egypt",
+         "file":"assets/game/100.jpg"
+      },
+      {
+         "correctAnswer":"Oulad Yahia, Morocco",
+         "file":"assets/game/101.jpg"
+      },
+      {
+         "correctAnswer":"Purnululu, Australia",
+         "file":"assets/game/102.jpg"
+      },
+      {
+         "correctAnswer":"Vinales, Cuba",
+         "file":"assets/game/103.jpg"
+      },
+      {
+         "correctAnswer":"Olkhon, Russia",
+         "file":"assets/game/104.jpg"
+      },
+      {
+         "correctAnswer":"Dainthlen, India",
+         "file":"assets/game/105.jpg"
+      },
+      {
+         "correctAnswer":"Santa Cruz, Galapagos",
+         "file":"assets/game/106.jpg"
       }
    ]
 }
