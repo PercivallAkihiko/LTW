@@ -121,10 +121,32 @@ $(document).ready(function () {
          }
       })
       .fail(function (data) {
+         console.log(data);
         console.log("Registrazione fallata");
       });
     event.preventDefault();
   });
+
+  var app = new Vue({
+   el: '#app',
+   data: {
+      nazioni: null
+   },
+   mounted: function () {
+       var self = this;
+       $.ajax({
+           url: '../php/load_nazioni.php',
+           method: 'POST',
+           success: function (data) {
+               self.nazioni = JSON.parse(data);
+           },
+           error: function (error) {
+               console.log(error);
+           }
+       });
+   }
+   
+});
 
 
 });
@@ -134,20 +156,3 @@ function toggle(){
    $('.sign_up').toggleClass('moveLeft');
    $('.switchButton').toggleClass('moveUp');
 };
-
-function ranking(){
-   $('html, body').animate({
-      scrollTop: $('#leaders').offset().top - 50
-  }, 500);
-};
-
-jQuery(window).scroll(function(){
-   var fromTopPx = 50; // distance to trigger
-   var scrolledFromtop = jQuery(window).scrollTop();
-   if(scrolledFromtop > fromTopPx){
-       jQuery('.top_bar').addClass('scrolled');
-       console.log("cane");
-   }else{
-       jQuery('.top_bar').removeClass('scrolled');
-   }
-});

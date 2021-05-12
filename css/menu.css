@@ -68,6 +68,8 @@ body,html
   margin-left: 0;
   font-size: 20px;
   cursor: pointer;
+
+  transition: color 0.5s ease-in-out;
 }
 
 .menu
@@ -97,7 +99,7 @@ body,html
   transition: color 0.5s ease-in-out;
 }
 
-.menu a:hover
+.menu a:hover, .logo testo_logo:hover
 {
   color: rgb(0, 185, 146);
 }

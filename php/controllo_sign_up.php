@@ -3,7 +3,7 @@
 
    $errors = [];
    $data = [];
-   $data['success'] = false;
+   $data['success'] = false;   
 
    if (empty($_POST['inputUsername'])) {
        $errors['username'] = 'Il campo username è vuoto!';
@@ -23,7 +23,7 @@
       $errors['password'] = 'Le due password non coincidono!';
    }
 
-   if (empty($_POST['inputEmailSign'])) {
+   if (empty($_POST['countries'])) {
        $errors['countries'] = 'Inserisci una nazione!';
    }
 

@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>  
-  <script type="text/javascript" src="/js/vue.js"></script>
-  <script src="/js/index.js"></script>
-  <script src="/js/ranking.js"></script>
+  <title>SpotMe</title>  
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">  
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&amp;display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/63209a46b9.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="css/mainstyle.css">    
-  <title>SpotMe</title>  
 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>  
+  <script type="text/javascript" src="/js/vue.js"></script>
+  <script src="/js/index.js"></script>  
 </head>
   <body>
       <div class="shadow shadowUp" id="shadow">
@@ -97,11 +96,11 @@
                     </div>
                     <div class="inputbox" id="inputEmailSignWrapper">
                       <i class="fas fa-envelope"></i>
-                      <input type="email" placeholder="Email" class="txt" name="inputEmail" id="inputEmailSign">
+                      <input type="email" placeholder="Email" class="txt" name="inputEmailSign" id="inputEmailSign">
                     </div>
                     <div class="inputbox" id="inputPasswordWrapper">
                       <i class="fas fa-lock"></i>
-                      <input type="password" placeholder="Password" class="txt" name="inputPassword" id="inputPasswordSign">
+                      <input type="password" placeholder="Password" class="txt" name="inputPasswordSign" id="inputPasswordSign">
                     </div>
                     <div class="inputbox" id="inputPasswordConfermaWrapper">
                       <i class="fas fa-lock"></i>
@@ -110,21 +109,11 @@
                     <div class="nazione">
                       <div class="inputbox" id="countriesWrapper">
                         <i class="fas fa-globe"></i>
-                        <div class="scelta" id="scelta">
+                        <div class="scelta" id="app">
                         <select name="countries" id="countries" class="icon-menu">
-                            <option value="" disabled selected class="naz">Nazione</option>
-                              <?php
-                                $dbconn = pg_connect("host=localhost port=5432 dbname=progetto user=postgres password=ciaomondo") or die("Could not connect: " . pg_last_error());
-                                
-                                $query="select * from nazioni ORDER BY nazione";
-                                $result = pg_query($query) or die('Query failed: ' . pg_last_error());
-                                while ($row = pg_fetch_row($result)) {
-                                    $nazione = $row[0];
-                                    $path = $row[1];
-                                    echo "<option value=" .$path .">". $nazione ."</option>";
-                                }
-                              ?>
-                      </select>
+                            <option value="" disabled selected class="naz">Nazione</option>    
+                            <option v-for="nazione in nazioni" v-bind:value="nazione.path">{{nazione.name}}</option>                                                      
+                        </select>
                       </div>
                     </div>
                   </div>

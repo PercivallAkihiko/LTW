@@ -28,7 +28,9 @@ window.onload = function () {
 
                     self.users[0]["medal"] = "assets/medal/gold.png";
                     self.users[1]["medal"] = "assets/medal/silver.png";
-                    self.users[2]["medal"] = "assets/medal/bronze.png";                
+                    self.users[2]["medal"] = "assets/medal/bronze.png";  
+
+                    self.lenght =  Object.keys(self.users).length;
                 },
                 error: function (error) {
                     console.log(error);
@@ -49,7 +51,7 @@ window.onload = function () {
                 else return this.low;
             },
             getTop: function(){
-                if(this.top > lenght) return lenght;
+                if(this.top > this.lenght) return this.lenght;
                 else return this.top;
             },
         }
