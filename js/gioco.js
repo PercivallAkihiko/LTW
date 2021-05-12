@@ -11,6 +11,7 @@ function risposta_giusta(){
     avanti_streak++;       
     document.getElementById('streak').innerHTML=avanti_streak;
     document.getElementById("streak1").value = avanti_streak;
+    document.getElementById("streak2").innerHTML = avanti_streak;
     funzione_gioco2();
 }
 

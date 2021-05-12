@@ -251,6 +251,7 @@ input
     top: 50%;
     left: 50%;
     width: 250px;
+    height: 97px;
 
     background-color: rgb(0, 185, 146);
     border-radius: 10px;
@@ -269,24 +270,20 @@ input
     background-color: tomato;
 }
 
-.alertTitle, .alertText
+.alertTitle, .alertText, .alertTitleAnswer, .alertTextAnswer
 {
-    grid-column: 1/-1;
     text-align: center;
 }
 
-.alertTitle
+.alertTitle, .alertText
+{
+    grid-column: 1/-1;;
+}
+
+.alertTitle, .alertTitleAnswer
 {
     font-size: 20px;
     font-weight: bold;
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.alertText
-{
-    grid-column: 2;
-    grid-row: 2;
 }
 
 .fa-check, .fa-times

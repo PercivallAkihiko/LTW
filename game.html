@@ -1,22 +1,41 @@
 <!DOCTYPE html>
   <html lang="it">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>game</title>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&amp;display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/63209a46b9.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" type="text/css" href="css/game.css">
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.2.0/aframe.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-        <script type="text/javascript" src="js/load_json.js"></script>
-        <script type="text/javascript" src="js/mouse_wheel.js"></script>   
-        <script type="text/javascript" src="js/gioco.js"></script>
-        <script type="text/javascript" src="js/gioco2.js"></script>
-        <script type="text/javascript" src="js/on_pressed.js"></script>
-     
+      <title>Game</title>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&amp;display=swap" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/63209a46b9.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" type="text/css" href="css/game.css">
+
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.2.0/aframe.min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+      <script type="text/javascript" src="js/load_json.js"></script>
+      <script type="text/javascript" src="js/mouse_wheel.js"></script>   
+      <script type="text/javascript" src="js/gioco.js"></script>
+      <script type="text/javascript" src="js/gioco2.js"></script>
+      <script type="text/javascript" src="js/on_pressed.js"></script>
+
+      <!--
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>game</title>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&amp;display=swap" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/63209a46b9.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" type="text/css" href="css/game.css">
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.2.0/aframe.min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+      <script type="text/javascript" src="js/load_json.js"></script>
+      <script type="text/javascript" src="js/mouse_wheel.js"></script>   
+      <script type="text/javascript" src="js/gioco.js"></script>
+      <script type="text/javascript" src="js/gioco2.js"></script>
+      <script type="text/javascript" src="js/on_pressed.js"></script>
+      -->
      
     </head>
 
@@ -28,7 +47,7 @@
             <input type="hidden" name="streak1" id="streak1" value="0">
             <input type="hidden" name="username" id="username">
             <div class="alertTitle">Risultato</div>
-            <div class="alertText">Punteggio: </div>
+            <div class="alertText">Punteggio: <t id="streak2">0</t></div>
             <button type="submit" value="../game.html" class="btn-alert1" name="link">Gioca di nuovo</button>              
             <button type="submit" value="../menu.php" class="btn-alert2" name="link">Esci</button> 
           </form>            
@@ -37,16 +56,16 @@
         <div class="giusto up" id="giusto" onclick="risposta_giusta()">
           <div class="alert_giusto">
             <i class="fas fa-check circle"></i>
-            <div class="alertTitle">GIUSTO!</div>
-            <div class="alertText">Ma andiamo avanti</div>            
+            <div class="alertTitleAnswer">GIUSTO!</div>
+            <div class="alertTextAnswer">Ma andiamo avanti</div>            
           </div>           
         </div>
 
         <div class="sbagliato up" id="sbagliato" onclick="risposta_sbagliata()">
           <div class="alert_sbagliato">
             <i class="fas fa-times"></i>
-            <div class="alertTitle">SBAGLIATO!</div>
-            <div class="alertText">La risposta giusta era: <t id="risposta_esatta"> <t></div>        
+            <div class="alertTitleAnswer">SBAGLIATO!</div>
+            <div class="alertTextAnswer">La risposta giusta era: <t id="risposta_esatta"> <t></div>        
           </div>           
         </div>
 
