@@ -22,7 +22,7 @@ window.addEventListener('keydown', (event) => {
     }
     else if (event.key === 'Enter' && sbagliato_sopra==true)
     {
-        document.getElementById("fakeAnchor").focus();
+        document.getElementById("fakeAnchor2").focus();
         risposta_sbagliata();
     }
     else
