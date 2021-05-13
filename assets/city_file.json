@@ -419,6 +419,146 @@
       {
          "correctAnswer":"Santa Cruz, Galapagos",
          "file":"assets/game/106.jpg"
+      },
+      {
+         "correctAnswer":"Paris, France",
+         "file":"assets/game/107.jpg"
+      },
+      {
+         "correctAnswer":"Barcelona, Spain",
+         "file":"assets/game/108.jpg"
+      },
+      {
+         "correctAnswer":"Hong Kong, China",
+         "file":"assets/game/109.jpg"
+      },
+      {
+         "correctAnswer":"Florence, Italy",
+         "file":"assets/game/110.jpg"
+      },
+      {
+         "correctAnswer":"New York, United States",
+         "file":"assets/game/111.jpg"
+      },
+      {
+         "correctAnswer":"Chicago, United States",
+         "file":"assets/game/112.jpg"
+      },
+      {
+         "correctAnswer":"Singapore, Singapore",
+         "file":"assets/game/113.jpg"
+      },
+      {
+         "correctAnswer":"Cape Town, South Africa",
+         "file":"assets/game/114.jpg"
+      },
+      {
+         "correctAnswer":"Machu Picchu, Peru",
+         "file":"assets/game/115.jpg"
+      },
+      {
+         "correctAnswer":"Diagon Alley, Harry Potter",
+         "file":"assets/game/116.jpg"
+      },
+      {
+         "correctAnswer":"Yosemite, United States",
+         "file":"assets/game/117.jpg"
+      },
+      {
+         "correctAnswer":"Cairo, Egypt",
+         "file":"assets/game/118.jpg"
+      },
+      {
+         "correctAnswer":"Samburu, Kenya",
+         "file":"assets/game/119.jpg"
+      },
+      {
+         "correctAnswer":"Mont Blanc, France",
+         "file":"assets/game/120.jpg"
+      },
+      {
+         "correctAnswer":"Ilulissat Saavat, Greenland",
+         "file":"assets/game/121.jpg"
+      },
+      {
+         "correctAnswer":"Woodlands, Wales",
+         "file":"assets/game/122.jpg"
+      },
+      {
+         "correctAnswer":"Yosemite, United States",
+         "file":"assets/game/123.jpg"
+      },
+      {
+         "correctAnswer":"Etelärinne, Finland",
+         "file":"assets/game/124.jpg"
+      },
+      {
+         "correctAnswer":"Trolltunga, Norway",
+         "file":"assets/game/125.jpg"
+      },
+      {
+         "correctAnswer":"Abu Dhabi, United Arab Emirates",
+         "file":"assets/game/126.jpg"
+      },
+      {
+         "correctAnswer":"Yosemite, United States",
+         "file":"assets/game/127.jpg"
+      },
+      {
+         "correctAnswer":"Vernago, Italy",
+         "file":"assets/game/128.jpg"
+      },
+      {
+         "correctAnswer":"Ross Island, Antarctica",
+         "file":"assets/game/129.jpg"
+      },
+      {
+         "correctAnswer":"Sagarmatha, Nepal",
+         "file":"assets/game/130.jpg"
+      },
+      {
+         "correctAnswer":"Grand Canyon, United States",
+         "file":"assets/game/131.jpg"
+      },
+      {
+         "correctAnswer":"Sintra, Portugal",
+         "file":"assets/game/132.jpg"
+      },
+      {
+         "correctAnswer":"Devon, Canada",
+         "file":"assets/game/133.jpg"
+      },
+      {
+         "correctAnswer":"Cape Town, South Africa",
+         "file":"assets/game/134.jpg"
+      },
+      {
+         "correctAnswer":"Huashan, China",
+         "file":"assets/game/135.jpg"
+      },
+      {
+         "correctAnswer":"Aoshima, Japan",
+         "file":"assets/game/136.jpg"
+      },
+      {
+         "correctAnswer":"San Jose, United States",
+         "file":"assets/game/137.jpg"
+      },
+      {
+         "correctAnswer":"Mendenhall, United States",
+         "file":"assets/game/138.jpg"
+      },
+      {
+         "correctAnswer":"Paricatuba, Brazil",
+         "file":"assets/game/139.jpg"
+      },
+      {
+         "correctAnswer":"Chichén-Itzá, Mexico",
+         "file":"assets/game/140.jpg"
+      },
+      {
+         "correctAnswer":"London, United Kingdom",
+         "file":"assets/game/141.jpg"
       }
    ]
 }
