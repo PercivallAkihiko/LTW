@@ -465,7 +465,7 @@ iconwrapper i
   .page_dentro
   {
     padding-top: 50px;
-    grid-template-columns: auto  300px auto;
+    grid-template-columns: auto  280px auto;
     grid-template-rows: 50% 50%;
   }
 
