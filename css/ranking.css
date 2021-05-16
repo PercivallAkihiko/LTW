@@ -443,3 +443,114 @@ iconwrapper i
     grid-template-columns: auto 600px auto;
   }
 }
+
+@media all and (max-width: 700px){
+  .page, .footer, .top_bar
+  {
+    grid-template-columns: auto 300px auto;
+  }
+
+  .leaders_wrapper
+  {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto;
+  }
+
+  .leaders, .players
+  {
+    grid-template-columns: auto 300px auto;    
+  }
+
+  .leader
+  {
+    width: 100%;
+  }
+
+  .fas
+  {
+    display: none;
+  }
+
+  .first_title
+  {
+    grid-column: 1;
+  }
+
+  .title_low
+  {
+    display: none;
+  }
+
+  .player
+  {
+    grid-template-columns: 40px 40px auto 45px 45px;
+  }
+
+  .position_low
+  {
+    grid-column: 1;
+  }
+
+  .highscore_low
+  {
+    width: auto;
+  }
+
+  .top_bar
+  {
+    grid-template-rows: 50px 50px;
+    background-color: rgb(1, 6, 6);
+  }
+
+  .logo, .menu
+  {
+    grid-column: 2;
+  }
+
+  .menu
+  {
+    grid-row: 2;
+  }
+
+  .menu, .logo
+  {
+    margin: auto;
+  }
+
+  .moveUp
+  {
+    display: none;
+  }
+
+  .page
+  {
+    margin-top: 100px;
+  }
+
+  .footer_title, .col2, .col3
+  {
+    grid-column: 2;
+  }
+
+  .footer_title
+  {
+    grid-row: 1
+  }
+
+  .col2
+  {
+    grid-row: 2
+  }
+
+  .col3
+  {
+    grid-row: 3
+  }
+
+  iconwrapper i
+  {
+    font-size: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
