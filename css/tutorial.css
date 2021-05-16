@@ -303,21 +303,21 @@ iconwrapper i
 }
 
 @media screen and (max-width: 1250px){
-  .top_bar, .leaders, .players, .footer
+  .top_bar, .footer
   {
     grid-template-columns: auto 1100px auto;
   }
 }
 
 @media screen and (max-width: 1150px){
-  .top_bar, .leaders, .players, .footer
+  .top_bar, .footer
   {
     grid-template-columns: auto 900px auto;
   }
 }
 
 @media screen and (max-width: 950px){
-  .top_bar, .leaders, .players, .footer
+  .top_bar, .footer
   {
     grid-template-columns: auto 700px auto;
     
