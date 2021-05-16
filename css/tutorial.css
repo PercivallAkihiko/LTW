@@ -451,10 +451,82 @@ iconwrapper i
     width: unset;
     transform: unset;
   }
-iconwrapper
-{
-  text-align: center;
-  margin: auto;  
-  padding: 1px;
+  
+  iconwrapper
+  {
+    text-align: center;
+    margin: auto;  
+    padding: 1px;
+  }
 }
+
+@media all and (max-width: 700px){
+  .footer, .top_bar
+  {
+    grid-template-columns: auto 300px auto;
+  }
+
+  .footer
+  {
+    grid-template-rows: auto auto auto;
+    height: auto;
+  }
+
+  .footer_title, .col2, .col3
+  {
+    grid-column: 2;
+  }
+
+  .footer_title
+  {
+    grid-row: 1
+  }
+
+  .col2
+  {
+    grid-row: 2
+  }
+
+  .col3
+  {
+    grid-row: 3
+  }
+
+  iconwrapper i
+  {
+    font-size: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .top_bar
+  {
+    grid-template-rows: 50px 50px;
+    background-color: rgb(1, 6, 6);
+  }
+
+  .logo, .menu
+  {
+    grid-column: 2;
+  }
+
+  .menu
+  {
+    grid-row: 2;
+  }
+
+  .menu, .logo
+  {
+    margin: auto;
+  }
+
+  .moveUp
+  {
+    display: none;
+  }
+
+  .data
+  {
+    margin-top: 100px;
+  }
 }
