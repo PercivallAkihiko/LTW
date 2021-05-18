@@ -8,6 +8,9 @@
    if (empty($_POST['inputUsername'])) {
        $errors['username'] = 'Il campo username è vuoto!';
    }
+   elseif(strlen($_POST['inputUsername']) < 5){
+      $errors['username'] = 'L\'username è troppo corto!';
+   }
 
    if (empty($_POST['inputEmailSign'])) {
        $errors['email'] = 'Il campo email è vuoto!';
@@ -34,7 +37,6 @@
       if ($line=pg_fetch_array($result, null, PGSQL_ASSOC)){
          $errors['email'] = 'Questa email è già registrata!';
       }
-
       else {
          $username= $_POST['inputUsername'];
          $q1="select * from users where username= $1";
