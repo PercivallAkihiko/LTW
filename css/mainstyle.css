@@ -251,7 +251,7 @@ body
 {
   display: grid;
   grid-template-columns: auto 1000px auto;
-  height: 100vh;
+  height: 100%;
 }
 
 .front_wrapper
