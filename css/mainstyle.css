@@ -142,6 +142,7 @@ body
 
   z-index: 1;
   display: block;
+  background-color: black;
 }
 
 .top_bar
@@ -607,10 +608,14 @@ select:focus
     grid-template-columns: auto 300px auto;
   }
 
+  .page
+  {
+    margin-top: 100px;
+  }
+
   .top_bar
   {
     grid-template-rows: 50px 50px;
-    background-color: rgb(1, 6, 6);
   }
 
   .logo, .menu
@@ -633,10 +638,6 @@ select:focus
     display: none;
   }
 
-  .page
-  {
-    margin-top: 100px;
-  }
 
   .front_wrapper
   {
@@ -655,5 +656,19 @@ select:focus
   {
     margin: auto;
     text-align: center;
+  }
+}
+
+@media all and (max-width: 1280px){
+  .background
+  {
+    max-width: 100%;
+  }
+}
+
+@media all and (max-height: 720px){
+  .background
+  {
+    max-width: 100%;
   }
 }

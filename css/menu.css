@@ -124,6 +124,7 @@ body,html
 
   z-index: 1;
   display: block;
+  background-color: black;
 }
 
 .option
@@ -318,6 +319,20 @@ body,html
   {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);;
+  }
+}
+
+@media all and (max-width: 1280px){
+  .background
+  {
+    max-width: 100%;
+  }
+}
+
+@media all and (max-height: 720px){
+  .background
+  {
+    max-width: 100%;
   }
 }
 
