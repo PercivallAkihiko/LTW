@@ -19,6 +19,9 @@
    if (empty($_POST['inputPasswordSign'])) {
        $errors['password'] = 'Il campo password è vuoto!';
    }
+   elseif(strlen($_POST['inputPasswordSign']) < 5){
+      $errors['password'] = 'La password è troppo corta!';
+   }
    elseif(empty($_POST['inputPasswordConferma'])) {
        $errors['passwordConferma'] = 'Ripeti la password!';
    }
