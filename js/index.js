@@ -3,6 +3,13 @@ $(document).ready(function () {
    var username = localStorage.getItem("username");
    var nationality = localStorage.getItem("nationality")
 
+   document.getElementById("inputUsername").disabled = true;
+   document.getElementById("inputEmailSign").disabled = true;
+   document.getElementById("inputPasswordSign").disabled = true;
+   document.getElementById("inputPasswordConferma").disabled = true;
+   document.getElementById("countries").disabled = true;
+   document.getElementById("signup").disabled = true;   
+
    if (username !== null){
        window.location.href = "menu.php";
    }
@@ -153,5 +160,30 @@ $(document).ready(function () {
 function toggle(){
    $('.login').toggleClass('moveLeft');
    $('.sign_up').toggleClass('moveLeft');
-   $('.switchButton').toggleClass('moveUp');
+   $('.switchButton').toggleClass('moveUp');  
+
+   if(document.getElementById("inputUsername").disabled){
+      document.getElementById("inputEmail").disabled = true;
+      document.getElementById("inputPassword").disabled = true;
+      document.getElementById("loginbutton").disabled = true;
+
+      document.getElementById("inputUsername").disabled = false;
+      document.getElementById("inputEmailSign").disabled = false;
+      document.getElementById("inputPasswordSign").disabled = false;
+      document.getElementById("inputPasswordConferma").disabled = false;
+      document.getElementById("countries").disabled = false;
+      document.getElementById("signup").disabled = false;   
+   }
+   else{
+      document.getElementById("inputEmail").disabled = false;
+      document.getElementById("inputPassword").disabled = false;
+      document.getElementById("loginbutton").disabled = false;
+
+      document.getElementById("inputUsername").disabled = true;
+      document.getElementById("inputEmailSign").disabled = true;
+      document.getElementById("inputPasswordSign").disabled = true;
+      document.getElementById("inputPasswordConferma").disabled = true;
+      document.getElementById("countries").disabled = true;
+      document.getElementById("signup").disabled = true;   
+   }
 };

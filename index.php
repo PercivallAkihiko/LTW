@@ -79,7 +79,7 @@
                       <i class="fas fa-lock"></i>
                       <input type="password" placeholder="Password" class="txt" name="inputPassword" id="inputPassword">
                     </div>
-                    <input type="submit" value="Login" class="btn-login" name="loginButton">
+                    <input type="submit" value="Login" class="btn-login" name="loginButton" id="loginbutton">
                     <iconwrapper>
                       <i class="fab fa-facebook-f"></i>
                       <i class="fab fa-twitter"></i>
@@ -118,7 +118,7 @@
                     </div>
                   </div>
 
-                    <input type="submit" value="Signup" class="btn-sign_up" name="sign_upButton">
+                    <input type="submit" value="Signup" class="btn-sign_up" name="sign_upButton" id="signup">
                     <iconwrapper>
                       <i class="fab fa-facebook-f"></i>
                       <i class="fab fa-twitter"></i>
