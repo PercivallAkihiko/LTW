@@ -88,7 +88,6 @@ body,html
   width: 80px;
   cursor: pointer;
   transition: color 0.5s ease-in-out;
-  border-bottom: 3px solid rgb(1, 1, 6);
 }
 
 .menu a:hover, .logo testo_logo:hover
