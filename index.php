@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <title>SpotMe</title>  
+  <title>SpotMe</title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="preconnect" href="https://fonts.gstatic.com">  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&amp;display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/63209a46b9.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" href="css/mainstyle.css">    
+  <link rel="stylesheet" type="text/css" href="css/mainstyle.css">
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script type="text/javascript" src="/js/vue.js"></script>
-  <script src="/js/index.js"></script>  
+  <script src="/js/index.js"></script>
 </head>
   <body>
       <div class="shadow shadowUp" id="shadow">
@@ -21,15 +21,15 @@
           <div class="alertContainer">
             <div class="alertTop">
               <div class="circleWrapper"><i class="fas fa-check circle"></i></div>
-            </div>    
+            </div>
             <div class="alertTitle">Awesome</div>
             <div class="alertText">La tua registrazione è completa, puoi effettuare il login</div>
             <div class="btn-alert" id="btn-alert">OK</div>
-          </div>  
+          </div>
           <div class="fakeBack">
             <div class="back1"></div>
             <div class="back2"></div>
-          </div>          
+          </div>
         </div>
       </div>
       <video autoplay muted loop id="background" class="background">
@@ -58,7 +58,7 @@
                   <line></line>
                   <div class="ciao">Spotme è un gioco per Browser di scoperta geografica che richiede ai giocatori di indovinare la posizione nel mondo usando gli indizi visibili.
                     All'utente viene mostrata una foto a 360°, scelta a mano da Google Street View, che ritrae luoghi famosi nelle città come monumenti, attrazioni e location
-                    di rilievo. Il giocatore ha a disposizione tre vite e utilizzando la propria padronanza geografica dovrà rispondere attraverso quattro scelte possibili.  
+                    di rilievo. Il giocatore ha a disposizione tre vite e utilizzando la propria padronanza geografica dovrà rispondere attraverso quattro scelte possibili.
                   </div>
                   <div class="btn-tutorial" onclick="window.location.href = 'tutorial.html';">
                     Tutorial
@@ -66,7 +66,7 @@
                 </div>
                 <div class="login" id="login">
                   <form action="../php/controllo_login.php" method="POST" class="login_content" id="loginForm">
-                    <loginTop>Login</loginTop>
+                    <loginTop>Accedi</loginTop>
                     <div class="login_error" id="login_error">
                         <i class="fas fa-exclamation-triangle"></i>
                         Username o password non corretti!
@@ -89,7 +89,7 @@
                 </div>
                 <div class="sign_up moveLeft" id="sign_up">
                   <form action="php/controllo_sign_up.php" method="post" class="sign_up_content" id="sign_upForm">
-                    <sign-upTop>Sign up</sign-upTop>
+                    <sign-upTop>Registrati</sign-upTop>
                     <div class="inputbox" id="inputUsernameWrapper">
                       <i class="fas fa-user"></i>
                       <input type="string" placeholder="Username" class="txt" name="inputUsername" id="inputUsername">
@@ -104,15 +104,15 @@
                     </div>
                     <div class="inputbox" id="inputPasswordConfermaWrapper">
                       <i class="fas fa-lock"></i>
-                      <input type="password" placeholder="Repeat Password" class="txt" name="inputPasswordConferma" id="inputPasswordConferma">
+                      <input type="password" placeholder="Ripeti Password" class="txt" name="inputPasswordConferma" id="inputPasswordConferma">
                     </div>
                     <div class="nazione">
                       <div class="inputbox" id="countriesWrapper">
                         <i class="fas fa-globe"></i>
                         <div class="scelta" id="app">
                         <select name="countries" id="countries" class="icon-menu">
-                            <option value="" disabled selected class="naz">Nazione</option>    
-                            <option v-for="nazione in nazioni" v-bind:value="nazione.path">{{nazione.name}}</option>                                                      
+                            <option value="" disabled selected class="naz">Nazione</option>
+                            <option v-for="nazione in nazioni" v-bind:value="nazione.path">{{nazione.name}}</option>
                         </select>
                       </div>
                     </div>

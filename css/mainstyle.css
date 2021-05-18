@@ -231,6 +231,11 @@ body
   color: rgb(0, 185, 146);
 }
 
+.menu a:hover
+{
+  border-bottom: 3px solid rgb(0, 185, 146);
+}
+
 .switchButton
 {
   grid-column: 3/3;
