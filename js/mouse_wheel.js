@@ -1,6 +1,6 @@
 window.addEventListener("wheel", (event) => {
     // small increments for smoother zooming
-    var delta = -event.deltaY*5 / 120 / 10;    
+    var delta = -event.deltaY / 120 / 10;    
     var mycam = document.getElementById("cam").getAttribute("camera");
     var finalZoom = document.getElementById("cam").getAttribute("camera").zoom + delta;
     // limiting the zoom
