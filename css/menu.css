@@ -266,13 +266,12 @@ body,html
 @media all and (max-width: 700px){
   .footer, .top_bar
   {
-    grid-template-columns: auto 300px auto;
+    grid-template-columns: auto 440px auto;
   }
 
   .top_bar
   {
     grid-template-rows: 50px 50px;
-    background-color: rgb(1, 6, 6);
   }
 
   .logo, .menu
@@ -306,6 +305,19 @@ body,html
   {
     top: 0%;
     transform: unset;
+  }
+}
+
+@media screen and (max-width: 435px){
+  .footer, .top_bar
+  {
+    grid-template-columns: auto 220px auto;
+  }
+
+  .menu
+  {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);;
   }
 }
 
