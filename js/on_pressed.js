@@ -20,12 +20,12 @@ window.addEventListener('keydown', (event) => {
 }
     if (event.key === 'Enter' && giusto_sopra==true)
     {
-        document.getElementById("fakeAnchor").focus();
+        document.getElementById("bottone_invia").blur();
         risposta_giusta();
     }
     else if (event.key === 'Enter' && sbagliato_sopra==true)
     {
-        document.getElementById("fakeAnchor2").focus();
+        document.getElementById("bottone_invia").blur();
         risposta_sbagliata();
     }
     else
