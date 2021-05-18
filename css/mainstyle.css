@@ -6,7 +6,7 @@ body,html
     font-family: "Noto Sans KR",sans-serif;
     color: white;
 
-    overflow-x: hidden;   
+    overflow: hidden;   
 }
 
 body
