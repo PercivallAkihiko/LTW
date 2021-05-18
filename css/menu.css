@@ -104,6 +104,11 @@ body,html
   color: rgb(0, 185, 146);
 }
 
+.menu a:hover
+{
+  border-bottom: 3px solid rgb(0, 185, 146);
+}
+
 .right
 {
     transform: translateX(100%);
@@ -157,6 +162,11 @@ body,html
 {
     transition: all 0.3s ease-in-out;
     color: rgb(0, 185, 146);
+}
+
+.logout:hover
+{
+  border-bottom: 3px solid rgb(0, 185, 146);
 }
 
 .username

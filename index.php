@@ -66,7 +66,7 @@
                 </div>
                 <div class="login" id="login">
                   <form action="../php/controllo_login.php" method="POST" class="login_content" id="loginForm">
-                    <loginTop>Login</loginTop>
+                    <loginTop>Accedi</loginTop>
                     <div class="login_error" id="login_error">
                         <i class="fas fa-exclamation-triangle"></i>
                         Username o password non corretti!
@@ -89,7 +89,7 @@
                 </div>
                 <div class="sign_up moveLeft" id="sign_up">
                   <form action="php/controllo_sign_up.php" method="post" class="sign_up_content" id="sign_upForm">
-                    <sign-upTop>Sign up</sign-upTop>
+                    <sign-upTop>Registrati</sign-upTop>
                     <div class="inputbox" id="inputUsernameWrapper">
                       <i class="fas fa-user"></i>
                       <input type="string" placeholder="Username" class="txt" name="inputUsername" id="inputUsername">
@@ -104,7 +104,7 @@
                     </div>
                     <div class="inputbox" id="inputPasswordConfermaWrapper">
                       <i class="fas fa-lock"></i>
-                      <input type="password" placeholder="Repeat Password" class="txt" name="inputPasswordConferma" id="inputPasswordConferma">
+                      <input type="password" placeholder="Ripeti Password" class="txt" name="inputPasswordConferma" id="inputPasswordConferma">
                     </div>
                     <div class="nazione">
                       <div class="inputbox" id="countriesWrapper">
@@ -118,7 +118,7 @@
                     </div>
                   </div>
 
-                    <input type="submit" value="Signup" class="btn-sign_up" name="sign_upButton">
+                    <input type="submit" value="Sign up" class="btn-sign_up" name="sign_upButton">
                     <iconwrapper>
                       <i class="fab fa-facebook-f"></i>
                       <i class="fab fa-twitter"></i>
