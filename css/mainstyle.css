@@ -6,7 +6,7 @@ body,html
     font-family: "Noto Sans KR",sans-serif;
     color: white;
 
-    overflow: hidden;   
+    overflow-x: hidden;   
 }
 
 body
@@ -616,6 +616,7 @@ select:focus
   .top_bar
   {
     grid-template-rows: 50px 50px;
+    background-color: rgb(1, 6, 6);
   }
 
   .logo, .menu
