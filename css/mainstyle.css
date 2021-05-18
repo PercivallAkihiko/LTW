@@ -229,7 +229,9 @@ body
 .menu a:hover, .logo testo_logo:hover
 {
   color: rgb(0, 185, 146);
+  border-bottom: 3px solid rgb(0, 185, 146);
 }
+
 
 .switchButton
 {
