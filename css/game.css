@@ -9,6 +9,11 @@ body,html
     overflow: hidden;   
 }
 
+.a-modal, .a-dialog
+{
+    display: none;
+}
+
 .state_bar
 {
     z-index: 2;
@@ -339,6 +344,7 @@ input
         grid-column-gap: 5px;
 
         grid-row-gap: 5px;
+        font-size: 10px;
     }
 
     .quiz_body form div
@@ -356,5 +362,13 @@ input
     .option-3, .option-4
     {
         grid-row: 2;
+    }
+}
+
+@media all and (orientation:landscape)
+{
+    .quiz_body form
+    {    
+        font-size: 10px;
     }
 }
