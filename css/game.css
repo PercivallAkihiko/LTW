@@ -64,7 +64,6 @@ body,html
     bottom: 0;
     background-color: transparent;
     
-    padding: 5px;
 }
 
 .quiz_body
@@ -325,4 +324,37 @@ input
 .alert input
 {
     display: block;
+}
+
+@media all and (max-width: 700px){
+    .quiz_wrapper
+    {
+        padding: 0px;
+    }
+
+    .quiz_body form
+    {    
+        grid-template-columns: repeat(2, 1fr) 30px;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 5px;
+
+        grid-row-gap: 5px;
+    }
+
+    .quiz_body form div
+    {    
+        height: 100%;
+        grid-row: 1/-1;
+        grid-column: 3;
+    }
+
+    .option-1, .option-2
+    {
+        grid-row: 1;
+    }
+
+    .option-3, .option-4
+    {
+        grid-row: 2;
+    }
 }

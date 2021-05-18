@@ -450,6 +450,11 @@ iconwrapper i
     grid-template-columns: auto 300px auto;
   }
 
+  .top_bar, .players, .leaders
+  {
+    width: 100%;
+  }
+
   .leaders_wrapper
   {
     grid-template-rows: auto auto auto;

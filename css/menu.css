@@ -111,7 +111,7 @@ body,html
 
 .left
 {
-    transform: translateX(-100%);
+    transform: translateX(-300%);
 }
 
 .background
@@ -260,6 +260,52 @@ body,html
   .top_bar
   {
     grid-template-columns: auto 700px auto;
+  }
+}
+
+@media all and (max-width: 700px){
+  .footer, .top_bar
+  {
+    grid-template-columns: auto 300px auto;
+  }
+
+  .top_bar
+  {
+    grid-template-rows: 50px 50px;
+    background-color: rgb(1, 6, 6);
+  }
+
+  .logo, .menu
+  {
+    grid-column: 2;
+  }
+
+  .menu
+  {
+    grid-row: 2;
+  }
+
+  .menu, .logo
+  {
+    margin: auto;
+  }
+
+  .moveUp
+  {
+    display: none;
+  }
+
+  .option_wrapper
+  {
+    padding: 5px;
+    grid-template-columns: auto auto auto;
+    width: 300px;
+  }
+
+  .option i
+  {
+    top: 0%;
+    transform: unset;
   }
 }
 
