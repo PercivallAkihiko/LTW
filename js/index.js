@@ -2,7 +2,7 @@ $(document).ready(function () {
 
    var username = localStorage.getItem("username");
    var nationality = localStorage.getItem("nationality")
-
+   document.getElementById("inputEmail").focus();
    document.getElementById("inputUsername").disabled = true;
    document.getElementById("inputEmailSign").disabled = true;
    document.getElementById("inputPasswordSign").disabled = true;
