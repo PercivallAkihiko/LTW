@@ -141,7 +141,7 @@ $(document).ready(function () {
    mounted: function () {
        var self = this;
        $.ajax({
-           url: '../php/load_nazioni.php?username=' + username,
+           url: '../php/load_nazioni.php',
            method: 'GET',
            success: function (data) {
                self.nazioni = JSON.parse(data);

@@ -8,6 +8,7 @@
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&amp;display=swap" rel="stylesheet">
+  <!-- ICONE -->
   <script src="https://kit.fontawesome.com/63209a46b9.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="css/mainstyle.css">
 
@@ -16,6 +17,7 @@
   <script src="/js/index.js"></script>
 </head>
   <body>
+      <!-- ALERT REGISTRAZIONE -->
       <div class="shadow shadowUp" id="shadow">
         <div class="alert">
           <div class="alertContainer">
@@ -32,10 +34,13 @@
           </div>
         </div>
       </div>
+      <!-- BACKGROUND VIDEO -->
       <video autoplay muted loop id="background" class="background">
         <source src="assets/background.mp4" type="video/mp4">
       </video>
+      <!-- WRAPPER PAGINA -->
       <div class="wrapper">
+          <!-- TOPBAR -->
           <div class="top_bar">
             <div class="top_bar_wrapper">
               <div class="logo" onclick="window.location.href = 'index.php';">
@@ -50,6 +55,7 @@
               </div>
             </div>
           </div>
+          <!-- CONTENUTO PAGINA -->
           <div class="page">
             <div class="front">
               <div class="front_wrapper">
@@ -64,6 +70,7 @@
                     Tutorial
                   </div>
                 </div>
+                <!-- ZONA LOGIN -->
                 <div class="login" id="login">
                   <form action="../php/controllo_login.php" method="POST" class="login_content" id="loginForm">
                     <loginTop>Accedi</loginTop>
@@ -87,6 +94,7 @@
                     </iconwrapper>
                   </form>
                 </div>
+                <!-- ZONA SIGN UP -->
                 <div class="sign_up moveLeft" id="sign_up">
                   <form action="php/controllo_sign_up.php" method="post" class="sign_up_content" id="sign_upForm">
                     <sign-upTop>Registrati</sign-upTop>
@@ -112,6 +120,7 @@
                         <div class="scelta" id="app">
                         <select name="countries" id="countries" class="icon-menu">
                             <option value="" disabled selected class="naz">Nazione</option>
+                            <!-- CARICO LE NAZIONI PRESE DAL DATABASE CON VUE -->
                             <option v-for="nazione in nazioni" v-bind:value="nazione.path">{{nazione.name}}</option>
                         </select>
                       </div>
