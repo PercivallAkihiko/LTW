@@ -365,7 +365,7 @@ input
     }
 }
 
-@media all and (orientation:landscape)
+@media all and (max-width: 500px) and (orientation:landscape)
 {
     .quiz_body form
     {    

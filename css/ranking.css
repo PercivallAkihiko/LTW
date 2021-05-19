@@ -4,7 +4,7 @@ body,html
     margin: 0;
     height: 100%;
     font-family: "Noto Sans KR",sans-serif;
-    background-color: black;   
+    background-color: rgb(1, 6, 6);   
 
     overflow-x: hidden;
 }
@@ -170,7 +170,7 @@ body,html
 .leader
 {
     background-color: rgb(249, 249, 249);
-    color: black;
+    color: rgb(1, 6, 6);
     text-align: center;
     border-radius: 5px;
 
@@ -230,7 +230,7 @@ body,html
   padding-bottom: 15px;
 
   background-color: rgb(249, 249, 249);
-  color: black;
+  color: rgb(1, 6, 6);
 }
 
 .players_wrapper
