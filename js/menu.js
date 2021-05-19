@@ -15,8 +15,9 @@ $(document).ready(function () {
         option_toggle();
     };  
 
+    //LOGOUT DAL MENU
     document.getElementById("logout").onclick = function() {
-        console.log("E' stato cliccato");
+        //RIMUOVO I DATI NEL LOCALSTORAGE
         localStorage.clear();   
         window.location.href = "index.php"; 
     };  
@@ -36,7 +37,7 @@ $(document).ready(function () {
             document.getElementById("user_profile").setAttribute("src", data.nationality);
         },
         error: function (error) {
-            console.log("non va");
+            console.log("Something is broken.");
         }
     } );
  

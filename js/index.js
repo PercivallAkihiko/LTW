@@ -14,6 +14,7 @@ $(document).ready(function () {
        window.location.href = "menu.php";
    }
 
+   //BOTTONE ALERT
    document.getElementById("btn-alert").onclick = function() {
       console.log("ok has been clicked");     
       $('.shadow').toggleClass('shadowUp');
@@ -82,12 +83,14 @@ $(document).ready(function () {
       encode: true,
     })
       .done(function (data) {
+         //RIMUOVE TUTTI I PRECEDENTI ERRORI
          document.querySelectorAll('.error').forEach(e => e.remove());
          console.log("registrazione partita");
          console.log(data);
 
          if (!data.success){
             if (data.errors.username) {
+               //APPENDO PRIMA DI inputUsernameWrapper LA DIV CON IL MESSAGGIO
                $("#inputUsernameWrapper").prepend(
                   '<div class="error signUpError"><i class="fas fa-exclamation-triangle"></i>  ' + data.errors.username + "</div>"
                );
@@ -120,8 +123,12 @@ $(document).ready(function () {
          else
          {
             console.log("Registrazione avvenuta con successo");
+            //PASSAGGIO SIGN UP A LOGIN
             toggle();
+
+            //ABBASSAMENTO ALERT DI SIGN UP
             $('.shadow').toggleClass('shadowUp');    
+            //RIMOZIONE EVENTUALE ERRORE SU LOGIN
             document.getElementById("login_error").style.display = "none";        
             $("#sign_upForm")[0].reset();
          }
@@ -133,6 +140,7 @@ $(document).ready(function () {
     event.preventDefault();
   });
 
+  //VUE PER IL CARICAMENTO DELLE NAZIONI
   var app = new Vue({
    el: '#app',
    data: {

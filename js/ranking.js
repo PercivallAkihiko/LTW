@@ -26,10 +26,12 @@ window.onload = function () {
                 success: function (data) {
                     self.users = JSON.parse(data);
 
+                    //INSERISCO MEDAGLIA PER I PRIMI  3
                     self.users[0]["medal"] = "assets/medal/gold.png";
                     self.users[1]["medal"] = "assets/medal/silver.png";
                     self.users[2]["medal"] = "assets/medal/bronze.png";  
 
+                    //LUNGHEZZA DELLA LISTA
                     self.lenght =  Object.keys(self.users).length;
                 },
                 error: function (error) {

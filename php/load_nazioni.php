@@ -15,6 +15,10 @@
           
           array_push($nazioni, $nazione);
      }
+     
+     pg_free_result($result);
+     pg_close($dbconn);
 
-     echo json_encode($nazioni)
+     //CONVERSIONE LISTA IN JSON
+     echo json_encode($nazioni);
 ?>
