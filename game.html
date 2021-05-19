@@ -42,7 +42,9 @@
     <body onload="funzione_iniziale()">      
       <div class="wrapper">
 
+        <!-- ALERT FINE PARTITA --> 
         <div class="shadow up" id="shadow">
+          <!-- LA FORM VIENE UTILIZZATA PER MANDARE I DATI AL PHP --> 
           <form action="php/fine_partita.php" method="POST" class="alert">
             <input type="hidden" name="streak1" id="streak1" value="0">
             <input type="hidden" name="username" id="username">
@@ -53,21 +55,21 @@
           </form>            
         </div>
 
+        <!-- ALERT RISPOSTA GIUSTA --> 
         <div class="giusto up" id="giusto" onclick="risposta_giusta()">
           <div class="alert_giusto">
             <i class="fas fa-check circle"></i>
             <div class="alertTitleAnswer">GIUSTO!</div>
-            <div class="alertTextAnswer">Ma andiamo avanti</div>
-            <a href="#" id="fakeAnchor2"></a>            
+            <div class="alertTextAnswer">Ma andiamo avanti</div>  
           </div>           
         </div>
 
+        <!-- ALERT RISPOSTA SBAGLIATA -->
         <div class="sbagliato up" id="sbagliato" onclick="risposta_sbagliata()">
           <div class="alert_sbagliato">
             <i class="fas fa-times"></i>
             <div class="alertTitleAnswer">SBAGLIATO!</div>
-            <div class="alertTextAnswer">La risposta giusta era: <t id="risposta_esatta"> <t></div>   
-            <a href="#" id="fakeAnchor"></a>     
+            <div class="alertTextAnswer">La risposta giusta era: <t id="risposta_esatta"> <t></div>     
           </div>           
         </div>
 
@@ -86,6 +88,7 @@
               <input id="risultato_c" type="radio" name="quizzolo">
               <input id="risultato_d" type="radio" name="quizzolo">
   
+              <!-- LABEL PER OGNI SINGOLO RADIO NASCOSTO -->
               <label  class="inputBox option-1" id="risultato_a1" for="risultato_a"></label>
               <label  class="inputBox option-2" id="risultato_b1" for="risultato_b"></label>
               <label  class="inputBox option-3" id="risultato_c1" for="risultato_c"></label>

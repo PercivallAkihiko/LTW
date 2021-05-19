@@ -2,19 +2,21 @@ var avanti_streak=0;
 var vite_rimanenti=3;
 var randomnumber=1;
 var primo_round = true;
-var controllo_foto = new Array();
+var controllo_foto = new Array(); // array che server a tener traccia delle foto passate cosi da non farle ripetere
 var giusto_sopra = false;
 var sbagliato_sopra = false;
 
+//si avvia quando chiude l'alert giusto
 function risposta_giusta(){
     $('#giusto').toggleClass('up');
     avanti_streak++;       
     document.getElementById('streak').innerHTML=avanti_streak;
-    document.getElementById("streak1").value = avanti_streak;
-    document.getElementById("streak2").innerHTML = avanti_streak;
+    document.getElementById("streak1").value = avanti_streak; //nascosto per il php
+    document.getElementById("streak2").innerHTML = avanti_streak; //per il risultato finale
     funzione_gioco2();
 }
 
+//si avvia quando chiude l'alert sbagliato
 function risposta_sbagliata(){
   $('#sbagliato').toggleClass('up');
   vite_rimanenti--;  
@@ -22,12 +24,12 @@ function risposta_sbagliata(){
   funzione_gioco2();
 }
 
-
+// si avvia on click sul pulsante sotto a destra, quando avviene la scelta. Non si avvia al primo turno.
 function funzione_gioco(){
   
   if (primo_round == false && vite_rimanenti>0)
 {
-  var valori = document.querySelector('input[name = "quizzolo"]:checked');
+  var valori = document.querySelector('input[name = "quizzolo"]:checked'); //vede qual è checkato
   if (document.getElementById(valori.id+"1").innerHTML == myQuestions[randomnumber-1].correctAnswer)
   {
     giusto_sopra = true;
@@ -44,7 +46,7 @@ function funzione_gioco(){
 
 
 
-
+// si carica ad ogni turno. Nel primo grazie alla funzione funzione_iniziale e in seguito grazie alla chiusura degli alert giusto o sbagliato.
 function funzione_gioco2(){
 giusto_sopra = false;
 sbagliato_sopra = false;
