@@ -1,6 +1,7 @@
 <!DOCTYPE html>
   <html lang="it">
     <head>
+
       <title>Game</title>
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,87 +14,64 @@
 
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.2.0/aframe.min.js"></script>
       <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+      <script type="text/javascript" src="js/game.js"></script>
       <script type="text/javascript" src="js/load_json.js"></script>
-      <script type="text/javascript" src="js/mouse_wheel.js"></script>   
-      <script type="text/javascript" src="js/gioco.js"></script>
-      <script type="text/javascript" src="js/gioco2.js"></script>
+      <script type="text/javascript" src="js/mouse_wheel.js"></script>
       <script type="text/javascript" src="js/on_pressed.js"></script>
 
-      <!--
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>game</title>
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&amp;display=swap" rel="stylesheet">
-      <script src="https://kit.fontawesome.com/63209a46b9.js" crossorigin="anonymous"></script>
-      <link rel="stylesheet" type="text/css" href="css/game.css">
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.2.0/aframe.min.js"></script>
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-      <script type="text/javascript" src="js/load_json.js"></script>
-      <script type="text/javascript" src="js/mouse_wheel.js"></script>   
-      <script type="text/javascript" src="js/gioco.js"></script>
-      <script type="text/javascript" src="js/gioco2.js"></script>
-      <script type="text/javascript" src="js/on_pressed.js"></script>
-      -->
-     
     </head>
 
-    <body onload="funzione_iniziale()">      
+    <body onload="funzione_iniziale()"> <!-- Quando la pagina viene caricata viene chiamata la funzione_iniziale. -->
       <div class="wrapper">
 
-        <!-- ALERT FINE PARTITA --> 
-        <div class="shadow up" id="shadow">
-          <!-- LA FORM VIENE UTILIZZATA PER MANDARE I DATI AL PHP --> 
-          <form action="php/fine_partita.php" method="POST" class="alert">
+        <div class="shadow up" id="shadow"> <!-- alert di fine partita-->
+          <form action="php/fine_partita.php" method="POST" class="alert"> <!-- La form viene utilizzata per inviare i dati al php quando l'utente perde. -->
             <input type="hidden" name="streak1" id="streak1" value="0">
             <input type="hidden" name="username" id="username">
             <div class="alertTitle">Risultato</div>
             <div class="alertText">Punteggio: <t id="streak2">0</t></div>
-            <button type="submit" value="../game.html" class="btn-alert1" name="link">Gioca di nuovo</button>              
+            <button type="submit" value="../game.html" class="btn-alert1" name="link">Gioca di nuovo</button>
             <button type="submit" value="../menu.php" class="btn-alert2" name="link">Esci</button> 
-          </form>            
+          </form>
         </div>
 
-        <!-- ALERT RISPOSTA GIUSTA --> 
-        <div class="giusto up" id="giusto" onclick="risposta_giusta()">
+        
+        <div class="giusto up" id="giusto" onclick="risposta_giusta()"> <!-- Alert per la risposta giusta, di norma è nascosto. --> 
           <div class="alert_giusto">
             <i class="fas fa-check circle"></i>
             <div class="alertTitleAnswer">GIUSTO!</div>
-            <div class="alertTextAnswer">Ma andiamo avanti</div>  
-          </div>           
+            <div class="alertTextAnswer">Ma andiamo avanti</div>
+          </div>
         </div>
 
-        <!-- ALERT RISPOSTA SBAGLIATA -->
-        <div class="sbagliato up" id="sbagliato" onclick="risposta_sbagliata()">
+        
+        <div class="sbagliato up" id="sbagliato" onclick="risposta_sbagliata()"> <!-- Alert per la risposta sbagliata, di norma è nascosto. -->
           <div class="alert_sbagliato">
             <i class="fas fa-times"></i>
             <div class="alertTitleAnswer">SBAGLIATO!</div>
-            <div class="alertTextAnswer">La risposta giusta era: <t id="risposta_esatta"> <t></div>     
-          </div>           
+            <div class="alertTextAnswer">La risposta giusta era: <t id="risposta_esatta"> <t></div>
+          </div>
         </div>
 
-        <div class="vite_bar">          
+        <div class="vite_streak_bar"> <!-- Barra che mostra le vite rimanenti e il punteggio attuale. -->
           <div id=vite_rimaste class="vite_testo">3</div>
           <i class="fas fa-heart"></i>
           <div>Punteggio:</div>
           <div id="streak" class="round_numero">0</div>
         </div>
 
-        <div class="quiz_wrapper">
+        <div class="quiz_wrapper"> <!-- Wrapper per le risposte. -->
           <div class="quiz_body">
             <form id="quiz">
               <input id="risultato_a" type="radio" name="quizzolo" checked>
-              <input  id="risultato_b" type="radio" name="quizzolo">
+              <input id="risultato_b" type="radio" name="quizzolo">
               <input id="risultato_c" type="radio" name="quizzolo">
               <input id="risultato_d" type="radio" name="quizzolo">
-  
-              <!-- LABEL PER OGNI SINGOLO RADIO NASCOSTO -->
-              <label  class="inputBox option-1" id="risultato_a1" for="risultato_a"></label>
+              <label  class="inputBox option-1" id="risultato_a1" for="risultato_a"></label> <!-- Label per ogni singolo radio nascosto. -->
               <label  class="inputBox option-2" id="risultato_b1" for="risultato_b"></label>
               <label  class="inputBox option-3" id="risultato_c1" for="risultato_c"></label>
               <label  class="inputBox option-4" id="risultato_d1" for="risultato_d"></label>
-  
+
               <div>
                 <button onclick="funzione_gioco()" id="bottone_invia" class="bottone_quiz" type="button"><i class="fas fa-angle-double-right"></i></button>
               </div>
@@ -101,11 +79,11 @@
           </div>
         </div>
 
-        <a-scene id="scenetta" embedded class="gioco" vr-mode-ui="enabled: false">
-            <a-entity id="cam" camera="zoom: 1" look-controls="reverseMouseDrag: true"></a-entity>
-            <a-sky id="panorama1" src="assets/game/bianco.jpg" rotation="0 -90 0"></a-sky>
+        <a-scene id="scenetta" embedded class="gioco" vr-mode-ui="enabled: false"> <!-- A-scene framework usato per mostrare le foto in 360 gradi. -->
+            <a-entity id="cam" camera="zoom: 1" look-controls="reverseMouseDrag: true"></a-entity> <!-- Entità per il movimento della visuale. -->
+            <a-sky id="panorama" src="assets/game/bianco.jpg" rotation="0 -90 0"></a-sky> <!-- Aggiunta della foto a 360 gradi con il suo orientamento. -->
         </a-scene>
+
       </div>
-        
     </body>
   </html>
