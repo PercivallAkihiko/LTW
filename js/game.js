@@ -32,7 +32,6 @@ function risposta_sbagliata()
   funzione_gioco2(); // Chiamo la funzione per cambiare le foto e i risultati.
 }
 
-
 function funzione_gioco() // Funzione che si avvia on click sul pulsante sotto a destra, quando avviene la scelta della risposta. Non si avvia al primo turno.
 {
   var checkato = document.querySelector('input[name = "quizzolo"]:checked'); // Controlla quale risposta è stata checkata.
