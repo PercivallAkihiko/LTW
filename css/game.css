@@ -8,7 +8,7 @@ body, html
     overflow: hidden;   
 }
 
-.a-modal, .a-dialog /* strani alert mostrati all'avvio del server sul Web.*/
+.a-modal, .a-dialog /* strani alert mostrati all'avvio del server sul Web a causa dell'a-frame.*/
 {
     display: none;
 }
@@ -208,7 +208,6 @@ input
     grid-column-gap: 5px;
     grid-row-gap: 5px 5px 5px 5px;
 }
-
 
 .alert_giusto, .alert_sbagliato
 {  

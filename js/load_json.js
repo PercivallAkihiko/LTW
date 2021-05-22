@@ -13,7 +13,6 @@ function readTextFile(file, callback) // Funzione per leggere i file Json.
   rawFile.send(null); // Ci sta qualche errore returna null.
 }
 
-
 var file_city; // Variabile con una lista di città (1000+).
 var myQuestions; // Variabile che contiene i panorami da indovinare (foto) e la posizione di tale foto.
 var numero_foto; // Numero di foto in totale.

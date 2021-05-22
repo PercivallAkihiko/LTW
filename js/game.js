@@ -12,6 +12,7 @@ $(document).ready(function () // Funzione che controlla se l'utente è loggato.
     {
       window.location.href = "index.php"; // Se non ci sta l'utente viene reindirizzato all'index del sito.
     }
+    funzione_iniziale(); // Chiamo funzione_iniziale che si trova in load_json.js (si occupa di caricare i file) e iniziare la partita.
 });
 
 function risposta_giusta() // Funzione che si avvia quando l'alert della risposta giusta viene chiuso (JQuery).
