@@ -59,7 +59,7 @@ function funzione_gioco2() // Funzione che si carica ad ogni turno. Nel primo gr
     randomnumber = Math.floor(Math.random() * (numero_foto)) + 1; // Numero random scelto per la foto.
     while (controllo_foto.includes(randomnumber) == true) // Controllo se la foto sta nell' array delle foto visualizzate in passato.
     {
-      randomnumber = Math.floor(Math.random() * (numero_foto - 1 + 1)) + 1; 
+      randomnumber = Math.floor(Math.random() * (numero_foto)) + 1; 
     }
     controllo_foto.push(randomnumber); // Aggiungo la foto all'array delle foto visualizzate.
     if (controllo_foto.length - 1 == numero_foto - 1) // Se abbiamo visto tutte le foto.
