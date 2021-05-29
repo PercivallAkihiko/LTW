@@ -1,18 +1,23 @@
 <?php
+   // Connessione con il DB
    $dbconn = pg_connect("host=localhost port=5432 dbname=progetto user=postgres password=ciaomondo") or die("Could not connect: " . pg_last_error());
 
+   //Inizializzazione dati
    $errors = [];
    $data = [];
    $data['success'] = false;   
 
+   //Controllo errori   
    if (empty($_POST['inputUsername'])) {
+      //Inserimento dell'errore nella lista con il corrispondente testo di errore      
        $errors['username'] = 'Il campo username è vuoto!';
    }
-   elseif(strlen($_POST['inputUsername']) < 5){
+   elseif(strlen($_POST['inputUsername']) < 5){ 
       $errors['username'] = 'L\'username è troppo corto!';
    }
 
    if (empty($_POST['inputEmailSign'])) {
+
        $errors['email'] = 'Il campo email è vuoto!';
    }
 
@@ -33,14 +38,17 @@
        $errors['countries'] = 'Inserisci una nazione!';
    }
 
+   //In caso di eventuale di errori si interrompe
    if (empty($errors)){
       $email = $_POST['inputEmailSign'];
       $q1="select * from users where email= $1";
-      $result=pg_query_params($dbconn, $q1, array($email));
+      $result=pg_query_params($dbconn, $q1, array($email));      
+      //Controllo email esistente
       if ($line=pg_fetch_array($result, null, PGSQL_ASSOC)){
          $errors['email'] = 'Questa email è già registrata!';
       }
       else {
+         //Controllo utente esistente
          $username= $_POST['inputUsername'];
          $q1="select * from users where username= $1";
          $result=pg_query_params($dbconn, $q1, array($username));
@@ -48,6 +56,7 @@
             $errors['username'] = 'Questa username esiste già!';
          }
          else {
+            //Inserimento utente nel DB
             $email = $_POST['inputEmailSign'];
             $password= $_POST['inputPasswordSign'];
             $nazione= $_POST['countries'];
@@ -63,7 +72,10 @@
       }
    }
 
+   //Inserimento errori in dati
    $data['errors'] = $errors;
+
+   //Formattazione JSON
    echo json_encode($data);
 
    pg_close($dbconn);

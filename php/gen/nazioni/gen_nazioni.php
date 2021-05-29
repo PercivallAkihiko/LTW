@@ -1,21 +1,6 @@
 <?php
      $dbconn = pg_connect("host=localhost port=5432 dbname=progetto user=postgres password=ciaomondo") or die("Could not connect: " . pg_last_error());
-
-
-     //$str = file_get_contents('names.json');
-     //$json = json_decode($str, true);
-
-     //echo $json[0];
-
-     //pg_free_result($result);
-     //pg_close($dbconn);
-
-
-     //rename("ciao.txt", "cane.txt");
-
      $files = scandir("../../assets/flags");
-     //$files = scandir("./flags");
-
 
      foreach(array_slice($files, 2) as $file)
      {
