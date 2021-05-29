@@ -72,7 +72,7 @@
                 </div>
                 <!-- ZONA LOGIN -->
                 <div class="login" id="login">
-                  <form action="../php/controllo_login.php" method="POST" class="login_content" id="loginForm">
+                  <form method="POST" class="login_content" id="loginForm">
                     <loginTop>Accedi</loginTop>
                     <div class="login_error" id="login_error">
                         <i class="fas fa-exclamation-triangle"></i>
@@ -96,7 +96,7 @@
                 </div>
                 <!-- ZONA SIGN UP -->
                 <div class="sign_up moveLeft" id="sign_up">
-                  <form action="php/controllo_sign_up.php" method="post" class="sign_up_content" id="sign_upForm">
+                  <form method="post" class="sign_up_content" id="sign_upForm">
                     <sign-upTop>Registrati</sign-upTop>
                     <div class="inputbox" id="inputUsernameWrapper">
                       <i class="fas fa-user"></i>
